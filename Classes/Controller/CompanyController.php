@@ -13,8 +13,6 @@ use Extcode\Contacts\Domain\Model\Company;
 use Extcode\Contacts\Domain\Repository\CategoryRepository;
 use Extcode\Contacts\Domain\Repository\CompanyRepository;
 use TYPO3\CMS\Core\Domain\Repository\PageRepository;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 class CompanyController extends ActionController
 {
@@ -33,11 +31,6 @@ class CompanyController extends ActionController
      */
     protected $companyRepository;
 
-    /**
-     * @var int
-     */
-    protected $pageId;
-
     public function __construct(
         PageRepository $pageRepository,
         CategoryRepository $categoryRepository,
@@ -50,22 +43,6 @@ class CompanyController extends ActionController
 
     protected function initializeAction(): void
     {
-        if ($GLOBALS['TSFE'] === null) {
-            $this->pageId = (int)GeneralUtility::_GP('id');
-        } else {
-            $this->pageId = $GLOBALS['TSFE']->id;
-        }
-
-        $frameworkConfiguration = $this->configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK
-        );
-        $persistenceConfiguration = [
-            'persistence' => [
-                'storagePid' => $this->pageId,
-            ],
-        ];
-        $this->configurationManager->setConfiguration(array_merge($frameworkConfiguration, $persistenceConfiguration));
-
         if (!empty($GLOBALS['TSFE']) && is_object($GLOBALS['TSFE'])) {
             static $cacheTagsSet = false;
 
