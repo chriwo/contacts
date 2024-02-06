@@ -12,14 +12,26 @@ namespace Extcode\Contacts\Controller;
 use Extcode\Contacts\Domain\Model\Address;
 use Extcode\Contacts\Domain\Model\Dto\AddressSearch;
 use Extcode\Contacts\Domain\Repository\AddressRepository;
+use Extcode\Contacts\Domain\Repository\CategoryRepository;
 use Extcode\Contacts\Domain\Repository\ZipRepository;
 use Extcode\Contacts\Hooks\AddressSearchAddressesLoadedHookInterface;
 use Extcode\Contacts\Utility\PageUtility;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class AddressController extends ActionController
 {
+    /**
+     * @var PageRepository
+     */
+    protected $pageRepository;
+
+    /**
+     * @var CategoryRepository
+     */
+    protected $categoryRepository;
+
     /**
      * @var AddressRepository
      */
@@ -30,13 +42,15 @@ class AddressController extends ActionController
      */
     protected $zipRepository;
 
-    public function injectAddressRepository(AddressRepository $addressRepository): void
-    {
+    public function __construct(
+        PageRepository $pageRepository,
+        CategoryRepository $categoryRepository,
+        AddressRepository $addressRepository,
+        ZipRepository $zipRepository
+    ) {
+        $this->pageRepository = $pageRepository;
+        $this->categoryRepository = $categoryRepository;
         $this->addressRepository = $addressRepository;
-    }
-
-    public function injectZipRepository(ZipRepository $zipRepository): void
-    {
         $this->zipRepository = $zipRepository;
     }
 

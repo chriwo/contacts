@@ -10,12 +10,24 @@ namespace Extcode\Contacts\Controller;
  */
 
 use Extcode\Contacts\Domain\Model\Company;
+use Extcode\Contacts\Domain\Repository\CategoryRepository;
 use Extcode\Contacts\Domain\Repository\CompanyRepository;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 class CompanyController extends ActionController
 {
+    /**
+     * @var PageRepository
+     */
+    protected $pageRepository;
+
+    /**
+     * @var CategoryRepository
+     */
+    protected $categoryRepository;
+
     /**
      * @var CompanyRepository
      */
@@ -26,8 +38,13 @@ class CompanyController extends ActionController
      */
     protected $pageId;
 
-    public function injectCompanyRepository(CompanyRepository $companyRepository): void
-    {
+    public function __construct(
+        PageRepository $pageRepository,
+        CategoryRepository $categoryRepository,
+        CompanyRepository $companyRepository
+    ) {
+        $this->pageRepository = $pageRepository;
+        $this->categoryRepository = $categoryRepository;
         $this->companyRepository = $companyRepository;
     }
 
