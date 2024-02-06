@@ -10,37 +10,24 @@ namespace Extcode\Contacts\Controller;
  */
 
 use Extcode\Contacts\Domain\Model\Company;
+use Extcode\Contacts\Domain\Repository\CategoryRepository;
 use Extcode\Contacts\Domain\Repository\CompanyRepository;
 use Extcode\Contacts\Controller\ActionController as ContactsActionController;
 use Psr\Http\Message\ResponseInterface;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 
 class CompanyController extends ContactsActionController
 {
-    protected int $pageId;
-
-    public function __construct(protected CompanyRepository $companyRepository)
-    {
+    public function __construct(
+        PageRepository $pageRepository,
+        CategoryRepository $categoryRepository,
+        protected CompanyRepository $companyRepository,
+    ) {
+        parent::__construct($pageRepository, $categoryRepository);
     }
 
     protected function initializeAction(): void
     {
-        if ($GLOBALS['TSFE'] === null) {
-            $this->pageId = (int)($this->request->getParsedBody()['id'] ?? $this->request->getQueryParams()['id'] ?? null);
-        } else {
-            $this->pageId = $this->request->getAttribute('frontend.page.information')->getId();
-        }
-
-        $frameworkConfiguration = $this->configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK
-        );
-        $persistenceConfiguration = [
-            'persistence' => [
-                'storagePid' => $this->pageId,
-            ],
-        ];
-        $this->configurationManager->setConfiguration(array_merge($frameworkConfiguration, $persistenceConfiguration));
-
         if (!empty($GLOBALS['TSFE']) && is_object($GLOBALS['TSFE'])) {
             static $cacheTagsSet = false;
 

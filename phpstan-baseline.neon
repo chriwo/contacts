@@ -391,19 +391,7 @@ parameters:
 			path: Classes/Controller/CompanyController.php
 
 		-
-			message: '#^Cannot access offset ''id'' on array\|object\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: Classes/Controller/CompanyController.php
-
-		-
 			message: '#^Cannot call method addCacheTags\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: Classes/Controller/CompanyController.php
-
-		-
-			message: '#^Cannot call method getId\(\) on TYPO3\\CMS\\Frontend\\Page\\PageInformation\|null\.$#'
 			identifier: method.nonObject
 			count: 1
 			path: Classes/Controller/CompanyController.php
@@ -417,7 +405,7 @@ parameters:
 		-
 			message: '#^Cannot cast mixed to int\.$#'
 			identifier: cast.int
-			count: 3
+			count: 2
 			path: Classes/Controller/CompanyController.php
 
 		-
@@ -451,19 +439,7 @@ parameters:
 			path: Classes/Controller/ContactController.php
 
 		-
-			message: '#^Cannot access offset ''id'' on array\|object\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: Classes/Controller/ContactController.php
-
-		-
 			message: '#^Cannot call method addCacheTags\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: Classes/Controller/ContactController.php
-
-		-
-			message: '#^Cannot call method getId\(\) on TYPO3\\CMS\\Frontend\\Page\\PageInformation\|null\.$#'
 			identifier: method.nonObject
 			count: 1
 			path: Classes/Controller/ContactController.php
@@ -477,7 +453,7 @@ parameters:
 		-
 			message: '#^Cannot cast mixed to int\.$#'
 			identifier: cast.int
-			count: 3
+			count: 2
 			path: Classes/Controller/ContactController.php
 
 		-

@@ -16,12 +16,10 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-    protected CategoryRepository $categoryRepository;
-    protected PageRepository $pageRepository;
-    public function __construct(PageRepository $pageRepository, CategoryRepository $categoryRepository)
-    {
-        $this->pageRepository = $pageRepository;
-        $this->categoryRepository = $categoryRepository;
+    public function __construct(
+        protected PageRepository $pageRepository,
+        protected CategoryRepository $categoryRepository,
+    ) {
     }
 
     /**

@@ -10,44 +10,27 @@ namespace Extcode\Contacts\Controller;
  */
 
 use Extcode\Contacts\Domain\Model\Contact;
+use Extcode\Contacts\Domain\Repository\CategoryRepository;
 use Extcode\Contacts\Domain\Repository\ContactRepository;
 use Extcode\Contacts\Controller\ActionController as ContactsActionController;
 use Psr\Http\Message\ResponseInterface;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 
 class ContactController extends ContactsActionController
 {
-    /**
-     * @var int
-     */
-    protected $pageId;
-
-    public function __construct(protected ContactRepository $contactRepository)
-    {
+    public function __construct(
+        PageRepository $pageRepository,
+        CategoryRepository $categoryRepository,
+        protected ContactRepository $contactRepository
+    ) {
+        parent::__construct($pageRepository, $categoryRepository);
     }
 
     protected function initializeAction(): void
     {
-        if ($GLOBALS['TSFE'] === null) {
-            $this->pageId = (int)($this->request->getParsedBody()['id'] ?? $this->request->getQueryParams()['id'] ?? null);
-        } else {
-            $this->pageId = $this->request->getAttribute('frontend.page.information')->getId();
-        }
-
-        $frameworkConfiguration = $this->configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK
-        );
-        $persistenceConfiguration = [
-            'persistence' => [
-                'storagePid' => $this->pageId,
-            ],
-        ];
-        $this->configurationManager->setConfiguration(array_merge($frameworkConfiguration, $persistenceConfiguration));
-
         if (!empty($GLOBALS['TSFE']) && is_object($GLOBALS['TSFE'])) {
             static $cacheTagsSet = false;
 
-            /** @var $typoScriptFrontendController TypoScriptFrontendController */
             $typoScriptFrontendController = $GLOBALS['TSFE'];
             if (!$cacheTagsSet) {
                 $typoScriptFrontendController->addCacheTags(['tx_contacts']);
