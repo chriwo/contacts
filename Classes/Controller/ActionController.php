@@ -10,38 +10,10 @@ namespace Extcode\Contacts\Controller;
  */
 
 use Extcode\Contacts\Domain\Model\Dto\Demand;
-use Extcode\Contacts\Domain\Repository\CategoryRepository;
-use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-    /**
-     * @var CategoryRepository
-     */
-    protected $categoryRepository;
-
-    /**
-     * @var \TYPO3\CMS\Core\Domain\Repository\PageRepository
-     */
-    protected $pageRepository;
-
-    /**
-     * @param CategoryRepository $categoryRepository
-     */
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Core\Domain\Repository\PageRepository $pageRepository
-     */
-    public function injectPageRepository(PageRepository $pageRepository)
-    {
-        $this->pageRepository = $pageRepository;
-    }
-
     /**
      * Create the demand object which define which records will get shown
      *
