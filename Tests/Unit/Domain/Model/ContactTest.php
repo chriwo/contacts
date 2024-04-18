@@ -170,6 +170,19 @@ class ContactTest extends UnitTestCase
     }
 
     #[Test]
+    public function setBirthdayBefore1970(): void
+    {
+        $birthdate = new \DateTime('1956-05-05');
+
+        $this->fixture->setBirthday($birthdate);
+
+        self::assertSame(
+            $birthdate,
+            $this->fixture->getBirthday()
+        );
+    }
+
+    #[Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
         self::assertSame(
