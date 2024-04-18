@@ -133,6 +133,12 @@ return [
                 ],
             ],
         ],
+        'sorting' => [
+            'label' => 'sorting',
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
         'type' => [
             'exclude' => 0,
             'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type',

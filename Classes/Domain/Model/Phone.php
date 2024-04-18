@@ -24,6 +24,11 @@ class Phone extends AbstractEntity
     protected $number = '';
 
     /**
+     * @var int
+     */
+    protected $sorting = 0;
+
+    /**
      * @param string $type
      * @throws \InvalidArgumentException
      */
@@ -77,5 +82,15 @@ class Phone extends AbstractEntity
     public function getNumber()
     {
         return $this->number;
+    }
+
+    public function getSorting(): int
+    {
+        return $this->sorting;
+    }
+
+    public function setSorting(int $sorting): void
+    {
+        $this->sorting = $sorting;
     }
 }
