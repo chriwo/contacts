@@ -287,6 +287,7 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_contacts_domain_model_phone',
                 'foreign_field' => 'contact',
+                'foreign_sortby' => 'sorting',
                 'maxitems' => 9999,
                 'appearance' => [
                     'collapseAll' => 1,
