@@ -18,6 +18,8 @@ class Phone extends AbstractEntity
     #[Validate(['validator' => 'NotEmpty'])]
     protected string $number = '';
 
+    protected int $sorting = 0;
+
     public function setType(string $type): void
     {
         $types = [
@@ -59,5 +61,15 @@ class Phone extends AbstractEntity
     public function getNumber(): string
     {
         return $this->number;
+    }
+
+    public function getSorting(): int
+    {
+        return $this->sorting;
+    }
+
+    public function setSorting(int $sorting): void
+    {
+        $this->sorting = $sorting;
     }
 }
