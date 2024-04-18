@@ -84,12 +84,18 @@ class Phone extends AbstractEntity
         return $this->number;
     }
 
-    public function getSorting(): int
+    /**
+     * @return int
+     */
+    public function getSorting()
     {
         return $this->sorting;
     }
 
-    public function setSorting(int $sorting): void
+    /**
+     * @param int $sorting
+     */
+    public function setSorting(int $sorting)
     {
         $this->sorting = $sorting;
     }
