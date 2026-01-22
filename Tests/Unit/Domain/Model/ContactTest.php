@@ -59,9 +59,7 @@ class ContactTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getSalutationInitiallyReturnsSalutation(): void
     {
         $this->assertSame(
@@ -70,9 +68,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setSalutationSetsSalutation(): void
     {
         $this->fixture->setSalutation('Salutation new');
@@ -83,9 +79,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTitleInitiallyReturnsTitle(): void
     {
         $this->assertSame(
@@ -94,9 +88,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setTitleSetsTitle(): void
     {
         $this->fixture->setTitle('Title new');
@@ -107,9 +99,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getFirstNameInitiallyReturnsFirstName(): void
     {
         $this->assertSame(
@@ -118,9 +108,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setFirstNameSetsFirstName(): void
     {
         $this->fixture->setFirstName('Firstname new');
@@ -131,9 +119,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setFirstNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -143,9 +129,7 @@ class ContactTest extends UnitTestCase
         $this->fixture->setFirstName('');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLastNameInitiallyReturnsLastName(): void
     {
         $this->assertSame(
@@ -154,9 +138,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLastNameSetsLastName(): void
     {
         $this->fixture->setLastName('Lastname new');
@@ -167,9 +149,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLastNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -179,9 +159,7 @@ class ContactTest extends UnitTestCase
         $this->fixture->setLastName('');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getBirthdayInitiallyReturnsZero(): void
     {
         $this->assertNull(
@@ -189,9 +167,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setBirthdaySetsBirthday(): void
     {
         $birthdate = new \DateTime('2019-05-05');
@@ -204,9 +180,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -215,9 +189,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setTeaserSetsTeaser(): void
     {
         $this->fixture->setTeaser('Teaser');
@@ -228,9 +200,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -239,9 +209,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setDescriptionSetsDescription(): void
     {
         $this->fixture->setDescription('Description');
@@ -252,9 +220,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getMetaDescriptionInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -263,9 +229,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setMetaDescriptionSetsMetaDescription(): void
     {
         $this->fixture->setMetaDescription('MetaDescription');

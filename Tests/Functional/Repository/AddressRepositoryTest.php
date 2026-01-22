@@ -50,9 +50,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         unset($this->objectManager);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findRecordsByUid(): void
     {
         $address = $this->addressRepository->findByUid(1);
@@ -62,9 +60,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findAllRecords(): void
     {
         $addresses = $this->addressRepository->findAll();
@@ -83,9 +79,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithoutCoordinates(): void
     {
         $addressSearch = new AddressSearch();
@@ -99,9 +93,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithoutRadius(): void
     {
         // Berlin Alexanderplatz
@@ -117,9 +109,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithStoragePidWithoutRadius(): void
     {
         // Berlin Alexanderplatz
@@ -149,9 +139,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithinRadius(): void
     {
         // Berlin Alexanderplatz
@@ -208,9 +196,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithStoragePidWithinRadius(): void
     {
         // Berlin Alexanderplatz
@@ -241,9 +227,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithSearchWord(): void
     {
         // Berlin Alexanderplatz
@@ -295,9 +279,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithoutRadiusAndSortingByTitle(): void
     {
         $addressSearch = new AddressSearch();
@@ -327,9 +309,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithoutRadiusAndSortingByDistance(): void
     {
         $addressSearch = new AddressSearch();
@@ -382,9 +362,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithRadiusAndSortingByDistance(): void
     {
         // Berlin Alexanderplatz
@@ -445,9 +423,7 @@ class AddressRepositoryTest extends FunctionalTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findByDistanceWithRadiusAndSortingByTitle(): void
     {
         // Berlin Alexanderplatz

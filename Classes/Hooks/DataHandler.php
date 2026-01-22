@@ -10,11 +10,13 @@ namespace Extcode\Contacts\Hooks;
  */
 
 use TYPO3\CMS\Core\Cache\CacheManager;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class DataHandler
 {
 
+    public function __construct(private readonly \TYPO3\CMS\Core\Cache\CacheManager $cacheManager)
+    {
+    }
     /**
      * Flushes the cache if a news record was edited.
      * This happens on two levels: by UID and by PID.
@@ -29,7 +31,7 @@ class DataHandler
 
         $cacheTagsToFlush = $this->getCacheTagsToFlush($params);
 
-        $cacheManager = GeneralUtility::makeInstance(CacheManager::class);
+        $cacheManager = $this->cacheManager;
         foreach ($cacheTagsToFlush as $cacheTag) {
             $cacheManager->flushCachesInGroupByTag('pages', $cacheTag);
         }

@@ -39,9 +39,7 @@ class CompanyTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getNameInitiallyReturnsName(): void
     {
         $this->assertSame(
@@ -50,9 +48,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setNameSetsName(): void
     {
         $this->fixture->setName('Name new');
@@ -63,9 +59,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -75,9 +69,7 @@ class CompanyTest extends UnitTestCase
         $this->fixture->setName('');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLegalNameInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -86,9 +78,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLegalNameSetsLegalName(): void
     {
         $this->fixture->setLegalName('LegalName');
@@ -99,9 +89,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLegalFormInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -110,9 +98,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLegalFormSetsLegalForm(): void
     {
         $this->fixture->setLegalForm('LegalForm');
@@ -123,9 +109,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getRegisteredOfficeInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -134,9 +118,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setRegisteredOfficeSetsRegisteredOffice(): void
     {
         $this->fixture->setRegisteredOffice('RegisteredOffice');
@@ -147,9 +129,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getRegisterCourtInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -158,9 +138,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setRegisterCourtSetsRegisterCourt(): void
     {
         $this->fixture->setRegisterCourt('RegisterCourt');
@@ -171,9 +149,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getRegisterNumberInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -182,9 +158,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setRegisterNumberSetsRegisterNumber(): void
     {
         $this->fixture->setRegisterNumber('RegisterNumber');
@@ -195,9 +169,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getVatIdInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -206,9 +178,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setVatIdSetsVatId(): void
     {
         $this->fixture->setVatId('VatId');
@@ -219,9 +189,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getEmailInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -230,9 +198,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setEmailSetsEmail(): void
     {
         $this->fixture->setEmail('Email');
@@ -243,9 +209,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getUriInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -254,9 +218,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setUriSetsUri(): void
     {
         $this->fixture->setUri('Uri');
@@ -267,9 +229,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -278,9 +238,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setTeaserSetsTeaser(): void
     {
         $this->fixture->setTeaser('Teaser');
@@ -291,9 +249,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -302,9 +258,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setDescriptionSetsDescription(): void
     {
         $this->fixture->setDescription('Description');
@@ -315,9 +269,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getMetaDescriptionInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -326,9 +278,7 @@ class CompanyTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setMetaDescriptionSetsMetaDescription(): void
     {
         $this->fixture->setMetaDescription('MetaDescription');

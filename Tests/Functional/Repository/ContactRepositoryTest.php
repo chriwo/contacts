@@ -48,9 +48,7 @@ class ContactRepositoryTest extends FunctionalTestCase
         unset($this->objectManager);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findDemandedAndOrderByLastName(): void
     {
         $demand = new Demand();

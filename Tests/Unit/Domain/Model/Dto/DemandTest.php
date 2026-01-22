@@ -29,9 +29,7 @@ class DemandTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -39,9 +37,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setSearchStringSetsSearchString(): void
     {
         $searchString = 'Search String';
@@ -54,9 +50,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getAvailableCategoriesInitiallyReturnsEmptyArray(): void
     {
         $this->assertEmpty(
@@ -64,9 +58,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setAvailableCategoriesSetsAvailableCategories(): void
     {
         $availableCategories = [2, 4];
@@ -79,9 +71,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getSelectedCategoryInitiallyReturnsZero(): void
     {
         $this->assertSame(
@@ -90,9 +80,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setSelectedCategorySetsSelectedCategory(): void
     {
         $selectedCategory = 2;
@@ -104,9 +92,7 @@ class DemandTest extends UnitTestCase
             $this->fixture->getSelectedCategory()
         );
     }
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getActionInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -114,9 +100,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setActionSetsAction(): void
     {
         $action = 'Action Name';
@@ -129,9 +113,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getClassInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -139,9 +121,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setClassSetsClass(): void
     {
         $class = 'Class Name';
@@ -154,9 +134,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -164,9 +142,7 @@ class DemandTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setOrderBySetsOrderBy(): void
     {
         $orderBy = 'distance';

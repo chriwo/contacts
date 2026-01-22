@@ -29,10 +29,11 @@ call_user_func(function () {
         );
         $flexFormPath = 'EXT:contacts/Configuration/FlexForms/' . $pluginName . 'Plugin.xml';
         if (file_exists(GeneralUtility::getFileAbsFileName($flexFormPath))) {
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', '--div--;Configuration,pi_flexform,', $pluginSignature, 'after:subheader');
             ExtensionManagementUtility::addPiFlexFormValue(
-                $pluginSignature,
-                'FILE:' . $flexFormPath
+                '*',
+                'FILE:' . $flexFormPath,
+                $pluginSignature
             );
         }
     }

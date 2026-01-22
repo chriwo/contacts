@@ -66,11 +66,7 @@ class GeocodeCommand extends Command
             ->select('uid', 'lat', 'lon', 'street', 'street_number', 'zip', 'city')
             ->from($this->tableName)
             ->where(
-                $queryBuilder->expr()->andX(
-                    $queryBuilder->expr()->eq('deleted', 0),
-                    $queryBuilder->expr()->eq('lat', 0),
-                    $queryBuilder->expr()->eq('lon', 0)
-                )
+                $queryBuilder->expr()->and($queryBuilder->expr()->eq('deleted', 0), $queryBuilder->expr()->eq('lat', 0), $queryBuilder->expr()->eq('lon', 0))
             )
             ->executeQuery()
             ->fetchAllAssociative();
@@ -108,9 +104,7 @@ class GeocodeCommand extends Command
                     ->where(
                         $queryBuilder->expr()->eq('uid', $address['uid'])
                     )
-                    ->set('lat', $lat)
-                    ->set('lon', $lng)
-                    ->execute();
+                    ->set('lat', $lat)->set('lon', $lng)->executeStatement();
                 $posResult++;
             } else {
                 $negResult++;

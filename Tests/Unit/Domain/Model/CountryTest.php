@@ -30,9 +30,7 @@ class CountryTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getIso2InitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -41,9 +39,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso2SetsIso2(): void
     {
         $this->fixture->setIso2('DE');
@@ -54,9 +50,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso2WithLessThanTwoDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -66,9 +60,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso2('DEU');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso2WithMoreThanTwoDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -78,9 +70,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso2('DEU');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getIso3InitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -89,9 +79,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso3SetsIso3(): void
     {
         $this->fixture->setIso3('DEU');
@@ -102,9 +90,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso3WithEmptyStringSetsIso3ToEmptyString(): void
     {
         $this->fixture->setIso3('');
@@ -115,9 +101,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso3WithNoEmptyStringAndLessThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -127,9 +111,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso3('DE');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setIso3WithNoEmptyStringAndMoreThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -139,9 +121,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso3('DEUT');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getNameInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -150,9 +130,7 @@ class CountryTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setNameSetsName(): void
     {
         $this->fixture->setName('Name new');
