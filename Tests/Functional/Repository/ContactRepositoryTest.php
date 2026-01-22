@@ -14,12 +14,13 @@ use Extcode\Contacts\Domain\Repository\ContactRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
+use PHPUnit\Framework\Attributes\Test;
+use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 
 class ContactRepositoryTest extends FunctionalTestCase
 {
-
     /**
-     * @var \TYPO3\CMS\Extbase\Object\ObjectManagerInterface
+     * @var ObjectManagerInterface
      */
     protected $objectManager;
 
@@ -29,7 +30,7 @@ class ContactRepositoryTest extends FunctionalTestCase
     protected $contactRepository;
 
     protected $testExtensionsToLoad = [
-        'typo3conf/ext/contacts'
+        'typo3conf/ext/contacts',
     ];
 
     public function setUp(): void
@@ -48,7 +49,7 @@ class ContactRepositoryTest extends FunctionalTestCase
         unset($this->objectManager);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function findDemandedAndOrderByLastName(): void
     {
         $demand = new Demand();
@@ -59,23 +60,23 @@ class ContactRepositoryTest extends FunctionalTestCase
         $this->contactRepository->setDefaultQuerySettings($querySettings);
         $companies = $this->contactRepository->findDemanded($demand)->toArray();
 
-        $this->assertSame(
+        self::assertSame(
             'Doe',
             $companies[0]->getLastName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Doe',
             $companies[1]->getLastName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Dupont',
             $companies[2]->getLastName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Janssen',
             $companies[3]->getLastName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Rossi',
             $companies[7]->getLastName()
         );

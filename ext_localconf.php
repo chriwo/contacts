@@ -22,7 +22,7 @@ ExtensionUtility::configurePlugin(
     [
         ContactController::class => 'list',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 ExtensionUtility::configurePlugin(
@@ -34,7 +34,7 @@ ExtensionUtility::configurePlugin(
     [
         ContactController::class => '',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 ExtensionUtility::configurePlugin(
@@ -46,7 +46,7 @@ ExtensionUtility::configurePlugin(
     [
         CompanyController::class => 'list',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 ExtensionUtility::configurePlugin(
@@ -58,7 +58,7 @@ ExtensionUtility::configurePlugin(
     [
         CompanyController::class => '',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 ExtensionUtility::configurePlugin(
@@ -70,7 +70,7 @@ ExtensionUtility::configurePlugin(
     [
         AddressController::class => 'search',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 ExtensionUtility::configurePlugin(
@@ -82,7 +82,7 @@ ExtensionUtility::configurePlugin(
     [
         AddressController::class => '',
     ],
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 // register "contacts:" namespace

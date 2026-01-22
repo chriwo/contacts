@@ -35,12 +35,12 @@ class CompanyController extends ActionController
     protected ModuleTemplate $moduleTemplate;
 
     public function __construct(
-        protected readonly CompanyRepository      $companyRepository,
-        protected readonly ModuleTemplateFactory  $moduleTemplateFactory,
+        protected readonly CompanyRepository $companyRepository,
+        protected readonly ModuleTemplateFactory $moduleTemplateFactory,
         protected readonly LanguageServiceFactory $languageServiceFactory,
-        protected readonly IconFactory            $iconFactory,
-    )
-    {}
+        protected readonly IconFactory $iconFactory,
+    ) {
+    }
 
     protected function initializeAction(): void
     {
@@ -72,7 +72,7 @@ class CompanyController extends ActionController
 
         $this->moduleTemplate->assignMultiple([
             'docHeader' => [
-                'enabled' => true
+                'enabled' => true,
             ],
             'demand' => $demand,
             'companies' => $companies,

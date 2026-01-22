@@ -33,7 +33,7 @@ class Phone extends AbstractEntity
             'MODEM',
             'CAR',
             'ISDN',
-            'VIDEO'
+            'VIDEO',
         ];
 
         if (!in_array($type, $types)) {

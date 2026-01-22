@@ -13,6 +13,7 @@ use Extcode\Contacts\Domain\Model\Address;
 use Extcode\Contacts\Domain\Model\Country;
 use InvalidArgumentException;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class AddressTest extends UnitTestCase
 {
@@ -31,27 +32,27 @@ class AddressTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
-        $this->assertSame(
+        self::assertSame(
             'INTL,POSTAL,PARCEL,WORK',
             $this->fixture->getType()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setValidTypeSetsType(): void
     {
         $this->fixture->setType('DOM');
 
-        $this->assertSame(
+        self::assertSame(
             'DOM',
             $this->fixture->getType()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setInvalidTypeThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -61,156 +62,156 @@ class AddressTest extends UnitTestCase
         $this->fixture->setType('inValidType');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getStreetInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getStreet()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setStreetSetsStreet(): void
     {
         $this->fixture->setStreet('Street');
 
-        $this->assertSame(
+        self::assertSame(
             'Street',
             $this->fixture->getStreet()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getStreetNumberInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getStreetNumber()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setStreetNumberSetsStreetNumber(): void
     {
         $this->fixture->setStreetNumber('Street Number');
 
-        $this->assertSame(
+        self::assertSame(
             'Street Number',
             $this->fixture->getStreetNumber()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getAddition1InitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getAddition1()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setAddition1SetsAddition1(): void
     {
         $this->fixture->setAddition1('Addition1');
 
-        $this->assertSame(
+        self::assertSame(
             'Addition1',
             $this->fixture->getAddition1()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getAddition2InitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getAddition2()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setAddition1SetsAddition2(): void
     {
         $this->fixture->setAddition2('Addition2');
 
-        $this->assertSame(
+        self::assertSame(
             'Addition2',
             $this->fixture->getAddition2()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getZipInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getZip()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setZipSetsZip(): void
     {
         $this->fixture->setZip('ZIP');
 
-        $this->assertSame(
+        self::assertSame(
             'ZIP',
             $this->fixture->getZip()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getCityInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getCity()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setCitySetsCity(): void
     {
         $this->fixture->setCity('City');
 
-        $this->assertSame(
+        self::assertSame(
             'City',
             $this->fixture->getCity()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getRegionInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getRegion()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setRegionSetsRegion(): void
     {
         $this->fixture->setRegion('Region');
 
-        $this->assertSame(
+        self::assertSame(
             'Region',
             $this->fixture->getRegion()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getCountryInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getCountry()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setCountrySetsCountry(): void
     {
         $country = new Country();
@@ -218,67 +219,67 @@ class AddressTest extends UnitTestCase
 
         $this->fixture->setCountry($country);
 
-        $this->assertSame(
+        self::assertSame(
             $country,
             $this->fixture->getCountry()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getPostBoxInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getPostBox()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setPostBoxSetsPostBox(): void
     {
         $this->fixture->setPostBox('Post Box');
 
-        $this->assertSame(
+        self::assertSame(
             'Post Box',
             $this->fixture->getPostBox()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLatInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getLat()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLatSetsLat(): void
     {
         $this->fixture->setLat('52° 31′ N');
 
-        $this->assertSame(
+        self::assertSame(
             '52° 31′ N',
             $this->fixture->getLat()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLonInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getLon()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLonSetsLon(): void
     {
         $this->fixture->setLon('13° 24′ O');
 
-        $this->assertSame(
+        self::assertSame(
             '13° 24′ O',
             $this->fixture->getLon()
         );

@@ -13,8 +13,7 @@ use TYPO3\CMS\Core\Cache\CacheManager;
 
 class DataHandler
 {
-
-    public function __construct(private readonly \TYPO3\CMS\Core\Cache\CacheManager $cacheManager)
+    public function __construct(private readonly CacheManager $cacheManager)
     {
     }
     /**

@@ -11,6 +11,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model\Dto;
 
 use Extcode\Contacts\Domain\Model\Dto\Demand;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class DemandTest extends UnitTestCase
 {
@@ -29,127 +30,127 @@ class DemandTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getSearchString()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setSearchStringSetsSearchString(): void
     {
         $searchString = 'Search String';
 
         $this->fixture->setSearchString($searchString);
 
-        $this->assertSame(
+        self::assertSame(
             $searchString,
             $this->fixture->getSearchString()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getAvailableCategoriesInitiallyReturnsEmptyArray(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getAvailableCategories()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setAvailableCategoriesSetsAvailableCategories(): void
     {
         $availableCategories = [2, 4];
 
         $this->fixture->setAvailableCategories($availableCategories);
 
-        $this->assertSame(
+        self::assertSame(
             $availableCategories,
             $this->fixture->getAvailableCategories()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getSelectedCategoryInitiallyReturnsZero(): void
     {
-        $this->assertSame(
+        self::assertSame(
             0,
             $this->fixture->getSelectedCategory()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setSelectedCategorySetsSelectedCategory(): void
     {
         $selectedCategory = 2;
 
         $this->fixture->setSelectedCategory($selectedCategory);
 
-        $this->assertSame(
+        self::assertSame(
             $selectedCategory,
             $this->fixture->getSelectedCategory()
         );
     }
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getActionInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getAction()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setActionSetsAction(): void
     {
         $action = 'Action Name';
 
         $this->fixture->setAction($action);
 
-        $this->assertSame(
+        self::assertSame(
             $action,
             $this->fixture->getAction()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getClassInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getClass()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setClassSetsClass(): void
     {
         $class = 'Class Name';
 
         $this->fixture->setClass($class);
 
-        $this->assertSame(
+        self::assertSame(
             $class,
             $this->fixture->getClass()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getOrderBy()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setOrderBySetsOrderBy(): void
     {
         $orderBy = 'distance';
 
         $this->fixture->setOrderBy($orderBy);
 
-        $this->assertSame(
+        self::assertSame(
             $orderBy,
             $this->fixture->getOrderBy()
         );

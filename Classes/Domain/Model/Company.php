@@ -15,7 +15,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
 
 class Company extends AbstractContact
 {
-
     #[Validate(['validator' => 'NotEmpty'])]
     protected string $name;
 

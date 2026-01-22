@@ -24,7 +24,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Pagination\QueryResultPaginator;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-use \TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 
 class ContactController extends ActionController
 {
@@ -34,8 +34,8 @@ class ContactController extends ActionController
     public function __construct(
         protected readonly ContactRepository $contactRepository,
         protected readonly ModuleTemplateFactory $moduleTemplateFactory
-    )
-    {}
+    ) {
+    }
 
     protected function initializeAction(): void
     {

@@ -11,6 +11,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model\Dto;
 
 use Extcode\Contacts\Domain\Model\Dto\AddressSearch;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class AddressSearchTest extends UnitTestCase
 {
@@ -29,151 +30,151 @@ class AddressSearchTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLatInitiallyReturnsZeroFloat(): void
     {
-        $this->assertSame(
+        self::assertSame(
             0.0,
             $this->fixture->getLat()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLatSetsLat(): void
     {
         $lat = 54.6717825;
 
         $this->fixture->setLat($lat);
 
-        $this->assertSame(
+        self::assertSame(
             $lat,
             $this->fixture->getLat()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLonInitiallyReturnsZeroFloat(): void
     {
-        $this->assertSame(
+        self::assertSame(
             0.0,
             $this->fixture->getLon()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLonSetsLon(): void
     {
         $lon = 13.4308058;
 
         $this->fixture->setLon($lon);
 
-        $this->assertSame(
+        self::assertSame(
             $lon,
             $this->fixture->getLon()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getRadiusInitiallyReturnsZeroInt(): void
     {
-        $this->assertSame(
+        self::assertSame(
             0,
             $this->fixture->getRadius()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setRadiusSetsRadius(): void
     {
         $radius = 10;
 
         $this->fixture->setRadius($radius);
 
-        $this->assertSame(
+        self::assertSame(
             $radius,
             $this->fixture->getRadius()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getPidsInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getPids()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setPidsSetsPids(): void
     {
         $pids = '10, 30';
 
         $this->fixture->setPids($pids);
 
-        $this->assertSame(
+        self::assertSame(
             $pids,
             $this->fixture->getPids()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getSearchString()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setSearchStringSetsSearchString(): void
     {
         $searchString = 'Search String';
 
         $this->fixture->setSearchString($searchString);
 
-        $this->assertSame(
+        self::assertSame(
             $searchString,
             $this->fixture->getSearchString()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getOrderBy()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setOrderBySetsOrderBy(): void
     {
         $orderBy = 'distance';
 
         $this->fixture->setOrderBy($orderBy);
 
-        $this->assertSame(
+        self::assertSame(
             $orderBy,
             $this->fixture->getOrderBy()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getFallbackOrderByInitiallyReturnsEmptyString(): void
     {
-        $this->assertEmpty(
+        self::assertEmpty(
             $this->fixture->getFallbackOrderBy()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setFallbackOrderBySetsFallbackOrderBy(): void
     {
         $fallbackOrderBy = 'title';
 
         $this->fixture->setFallbackOrderBy($fallbackOrderBy);
 
-        $this->assertSame(
+        self::assertSame(
             $fallbackOrderBy,
             $this->fixture->getFallbackOrderBy()
         );

@@ -11,7 +11,6 @@ namespace Extcode\Contacts\DataHandler;
 
 class EvalFloat8
 {
-
     /**
      * JavaScript code for client side validation/evaluation
      */
@@ -28,7 +27,7 @@ class EvalFloat8
         $value = preg_replace('/[^0-9,\\.-]/', '', $value);
         $negative = $value[0] === '-';
         $value = strtr($value, [',' => '.', '-' => '']);
-        if (strpos($value, '.') === false) {
+        if (!str_contains($value, '.')) {
             $value .= '.0';
         }
         $valueArray = explode('.', $value);

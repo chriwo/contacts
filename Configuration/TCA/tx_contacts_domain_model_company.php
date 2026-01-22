@@ -1,5 +1,7 @@
 <?php
 
+use TYPO3\CMS\Core\Resource\FileType;
+
 defined('TYPO3') or die();
 
 $_LLL_core_general = 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf';
@@ -50,12 +52,12 @@ return [
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
                     --palette--;' . $_LLL_tca . ':palettes.visibility;hiddenonly,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,
-            '
+            ',
         ],
     ],
     'palettes' => [
         'name' => [
-            'showitem' => 'name, --linebreak--, legal_name, legal_form, --linebreak--, registered_office, register_court, register_number, vat_id', 'canNotCollapse' => 1
+            'showitem' => 'name, --linebreak--, legal_name, legal_form, --linebreak--, registered_office, register_court, register_number, vat_id', 'canNotCollapse' => 1,
         ],
         'hiddenonly' => [
             'showitem' => 'hidden;' . $_LLL_db . ':tx_contacts_domain_model_company',
@@ -94,14 +96,14 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'max' => 255,
-            ]
+            ],
         ],
         'hidden' => [
             'exclude' => 1,
             'label' => $_LLL_core_general . ':LGL.hidden',
             'config' => [
                 'type' => 'check',
-                'renderType' => 'checkboxToggle'
+                'renderType' => 'checkboxToggle',
             ],
         ],
         'starttime' => [
@@ -113,7 +115,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -126,7 +128,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -147,7 +149,7 @@ return [
                 'maxitems' => 1,
                 'eval' => 'int',
                 'default' => 0,
-            ]
+            ],
         ],
 
         'name' => [
@@ -157,7 +159,7 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim',
-                'required' => true
+                'required' => true,
             ],
         ],
         'legal_name' => [
@@ -166,7 +168,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'legal_form' => [
@@ -175,7 +177,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'registered_office' => [
@@ -184,7 +186,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'register_court' => [
@@ -193,7 +195,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'register_number' => [
@@ -202,7 +204,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'vat_id' => [
@@ -211,7 +213,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
 
@@ -313,7 +315,7 @@ return [
                     'levelLinksPosition' => 'top',
                     'showSynchronizationLink' => 1,
                     'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
+                    'showAllLocalizationLink' => 1,
                 ],
             ],
         ],
@@ -330,7 +332,7 @@ return [
                     'levelLinksPosition' => 'top',
                     'showSynchronizationLink' => 1,
                     'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
+                    'showAllLocalizationLink' => 1,
                 ],
             ],
         ],
@@ -340,7 +342,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'uri' => [
@@ -350,7 +352,7 @@ return [
                 'type' => 'link',
                 'size' => 30,
                 'allowedTypes' => ['page', 'file', 'url', 'record', 'telephone'],
-                'appearance' => ['browserTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel']
+                'appearance' => ['browserTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel'],
             ],
         ],
         'logo' => [
@@ -362,23 +364,23 @@ return [
                 'maxitems' => 1,
                 'minitems' => 0,
                 'appearance' => [
-                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                 ],
                 'overrideChildTca' => [
                     'types' => [
                         '0' => [
                             'showitem' => '
                                 --palette--;LLL:EXT:file/Resources/Private/Language/locallang.xlf:fileimageoverlayPalette;imageoverlayPalette,
-                                --palette--;;filePalette'
+                                --palette--;;filePalette',
                         ],
-                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
+                        FileType::IMAGE->value => [
                             'showitem' => '
                                 --palette--;LLL:EXT:file/Resources/Private/Language/locallang.xlf:fileimageoverlayPalette;imageoverlayPalette,
-                                --palette--;;filePalette'
-                        ]
-                    ]
-                ]
-            ]
+                                --palette--;;filePalette',
+                        ],
+                    ],
+                ],
+            ],
         ],
 
         'teaser' => [
@@ -432,7 +434,7 @@ return [
                         'hide' => true,
                         'delete' => true,
                         'localize' => true,
-                    ]
+                    ],
                 ],
                 'inline' => [
                     'inlineNewButtonStyle' => 'display: inline-block;',

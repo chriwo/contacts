@@ -12,6 +12,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model;
 use Extcode\Contacts\Domain\Model\Company;
 use InvalidArgumentException;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class CompanyTest extends UnitTestCase
 {
@@ -39,27 +40,27 @@ class CompanyTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getNameInitiallyReturnsName(): void
     {
-        $this->assertSame(
+        self::assertSame(
             $this->name,
             $this->fixture->getName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setNameSetsName(): void
     {
         $this->fixture->setName('Name new');
 
-        $this->assertSame(
+        self::assertSame(
             'Name new',
             $this->fixture->getName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -69,221 +70,221 @@ class CompanyTest extends UnitTestCase
         $this->fixture->setName('');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLegalNameInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getLegalName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLegalNameSetsLegalName(): void
     {
         $this->fixture->setLegalName('LegalName');
 
-        $this->assertSame(
+        self::assertSame(
             'LegalName',
             $this->fixture->getLegalName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLegalFormInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getLegalForm()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLegalFormSetsLegalForm(): void
     {
         $this->fixture->setLegalForm('LegalForm');
 
-        $this->assertSame(
+        self::assertSame(
             'LegalForm',
             $this->fixture->getLegalForm()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getRegisteredOfficeInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getRegisteredOffice()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setRegisteredOfficeSetsRegisteredOffice(): void
     {
         $this->fixture->setRegisteredOffice('RegisteredOffice');
 
-        $this->assertSame(
+        self::assertSame(
             'RegisteredOffice',
             $this->fixture->getRegisteredOffice()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getRegisterCourtInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getRegisterCourt()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setRegisterCourtSetsRegisterCourt(): void
     {
         $this->fixture->setRegisterCourt('RegisterCourt');
 
-        $this->assertSame(
+        self::assertSame(
             'RegisterCourt',
             $this->fixture->getRegisterCourt()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getRegisterNumberInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getRegisterNumber()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setRegisterNumberSetsRegisterNumber(): void
     {
         $this->fixture->setRegisterNumber('RegisterNumber');
 
-        $this->assertSame(
+        self::assertSame(
             'RegisterNumber',
             $this->fixture->getRegisterNumber()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getVatIdInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getVatId()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setVatIdSetsVatId(): void
     {
         $this->fixture->setVatId('VatId');
 
-        $this->assertSame(
+        self::assertSame(
             'VatId',
             $this->fixture->getVatId()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getEmailInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getEmail()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setEmailSetsEmail(): void
     {
         $this->fixture->setEmail('Email');
 
-        $this->assertSame(
+        self::assertSame(
             'Email',
             $this->fixture->getEmail()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getUriInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getUri()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setUriSetsUri(): void
     {
         $this->fixture->setUri('Uri');
 
-        $this->assertSame(
+        self::assertSame(
             'Uri',
             $this->fixture->getUri()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getTeaser()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setTeaserSetsTeaser(): void
     {
         $this->fixture->setTeaser('Teaser');
 
-        $this->assertSame(
+        self::assertSame(
             'Teaser',
             $this->fixture->getTeaser()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setDescriptionSetsDescription(): void
     {
         $this->fixture->setDescription('Description');
 
-        $this->assertSame(
+        self::assertSame(
             'Description',
             $this->fixture->getDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getMetaDescriptionInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getMetaDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setMetaDescriptionSetsMetaDescription(): void
     {
         $this->fixture->setMetaDescription('MetaDescription');
 
-        $this->assertSame(
+        self::assertSame(
             'MetaDescription',
             $this->fixture->getMetaDescription()
         );
