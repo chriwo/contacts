@@ -1,0 +1,13 @@
+includes:
+  - phpstan-baseline.neon
+parameters:
+  level: max
+  reportUnmatchedIgnoredErrors: true
+  paths:
+    - ./
+  excludePaths:
+    - .build
+    - .ddev
+    - .github
+    - ../../config (?)
+    - ../../var (?)

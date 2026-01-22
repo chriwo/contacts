@@ -1,14 +1,23 @@
-.build
-composer.lock
-
-.php_cs.cache
-.phplint.cache
-Build/.phpunit.result.cache
-
+msi.iws
+.idea/
+nbproject/
+_make/
 .DS_Store
-.idea
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.svn
 
-var/
+Build/.phpunit.result.cache
+/.build
+.sass-cache
+composer.lock
+var
+.php-cs-fixer.cache
+/config
 
 phpunit.coverage.xml
 phpunit.report.xml
