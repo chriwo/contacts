@@ -45,7 +45,7 @@ class Address extends AbstractEntity
     #[Lazy]
     protected ObjectStorage $ttContent;
 
-    protected ?Contact  $contact;
+    protected ?Contact $contact;
 
     protected ?Company $company;
 

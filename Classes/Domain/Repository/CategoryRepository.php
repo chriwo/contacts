@@ -19,7 +19,7 @@ class CategoryRepository extends Repository
     /**
      * Constructs a new Repository
      */
-    public function __construct(private readonly \TYPO3\CMS\Core\Database\ConnectionPool $connectionPool)
+    public function __construct(private readonly ConnectionPool $connectionPool)
     {
         parent::__construct();
     }
@@ -42,7 +42,7 @@ class CategoryRepository extends Repository
                 'parent' =>
                     ($localCategory->getParent() ? $localCategory->getParent()->getUid() : null),
                 'subcategories' => null,
-                'isSelected' => ($selectedCategory == $localCategory ? true : false)
+                'isSelected' => ($selectedCategory == $localCategory ? true : false),
             ];
             $categories[] = $newCategory;
         }

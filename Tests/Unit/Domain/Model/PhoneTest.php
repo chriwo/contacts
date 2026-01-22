@@ -11,6 +11,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model;
 
 use Extcode\Contacts\Domain\Model\Phone;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class PhoneTest extends UnitTestCase
 {
@@ -29,27 +30,27 @@ class PhoneTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
-        $this->assertSame(
+        self::assertSame(
             'VOICE',
             $this->fixture->getType()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setValidTypeSetsType(): void
     {
         $this->fixture->setType('CELL');
 
-        $this->assertSame(
+        self::assertSame(
             'CELL',
             $this->fixture->getType()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setInvalidTypeThrowsException(): void
     {
         $this->expectException(\InvalidArgumentException::class);
@@ -59,21 +60,21 @@ class PhoneTest extends UnitTestCase
         $this->fixture->setType('inValidType');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getNumberInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getNumber()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setNumberSetsNumber(): void
     {
         $this->fixture->setNumber('foo bar');
 
-        $this->assertSame(
+        self::assertSame(
             'foo bar',
             $this->fixture->getNumber()
         );

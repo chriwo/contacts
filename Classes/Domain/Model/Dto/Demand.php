@@ -68,7 +68,7 @@ class Demand
         return $this->class;
     }
 
-    public function setClass(string $class):void
+    public function setClass(string $class): void
     {
         $this->class = $class;
     }

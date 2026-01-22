@@ -14,12 +14,13 @@ use Extcode\Contacts\Domain\Repository\CompanyRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
+use PHPUnit\Framework\Attributes\Test;
+use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 
 class CompanyRepositoryTest extends FunctionalTestCase
 {
-
     /**
-     * @var \TYPO3\CMS\Extbase\Object\ObjectManagerInterface
+     * @var ObjectManagerInterface
      */
     protected $objectManager;
 
@@ -29,7 +30,7 @@ class CompanyRepositoryTest extends FunctionalTestCase
     protected $companyRepository;
 
     protected $testExtensionsToLoad = [
-        'typo3conf/ext/contacts'
+        'typo3conf/ext/contacts',
     ];
 
     public function setUp(): void
@@ -48,7 +49,7 @@ class CompanyRepositoryTest extends FunctionalTestCase
         unset($this->objectManager);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function findDemandedAndOrderByName(): void
     {
         $demand = new Demand();
@@ -59,23 +60,23 @@ class CompanyRepositoryTest extends FunctionalTestCase
         $this->companyRepository->setDefaultQuerySettings($querySettings);
         $companies = $this->companyRepository->findDemanded($demand)->toArray();
 
-        $this->assertSame(
+        self::assertSame(
             'Abgeordnetenhaus von Berlin',
             $companies[0]->getName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Bayerischer Landtag',
             $companies[1]->getName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Bremische Bürgerschaft',
             $companies[2]->getName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Landtag von Baden-Württemberg',
             $companies[10]->getName()
         );
-        $this->assertSame(
+        self::assertSame(
             'Thüringer Landtag',
             $companies[15]->getName()
         );

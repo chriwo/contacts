@@ -23,8 +23,9 @@ class AddressController extends ActionController
 {
     public function __construct(
         protected AddressRepository $addressRepository,
-        protected ZipRepository $zipRepository)
-    {}
+        protected ZipRepository $zipRepository
+    ) {
+    }
 
     public function searchAction(): ResponseInterface
     {

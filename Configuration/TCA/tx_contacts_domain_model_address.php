@@ -42,16 +42,16 @@ return [
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
                     --palette--;' . $_LLL_tca . ':palettes.visibility;hiddenonly,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,
-            '
+            ',
         ],
     ],
     'palettes' => [
         'address' => [
             'showitem' => 'street, street_number, --linebreak--, addition1, addition2, --linebreak--, zip, city, --linebreak--, region, country',
-            'canNotCollapse' => 1
+            'canNotCollapse' => 1,
         ],
         'coords' => [
-            'showitem' => 'lat, lon', 'canNotCollapse' => 1
+            'showitem' => 'lat, lon', 'canNotCollapse' => 1,
         ],
         'hiddenonly' => [
             'showitem' => 'hidden;' . $_LLL_db . ':tx_contacts_domain_model_address',
@@ -90,14 +90,14 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'max' => 255,
-            ]
+            ],
         ],
         'hidden' => [
             'exclude' => 1,
             'label' => $_LLL_core_general . ':LGL.hidden',
             'config' => [
                 'type' => 'check',
-                'renderType' => 'checkboxToggle'
+                'renderType' => 'checkboxToggle',
             ],
         ],
         'starttime' => [
@@ -109,7 +109,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -122,7 +122,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -132,7 +132,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
 
@@ -164,27 +164,27 @@ return [
                 'items' => [
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.DOM',
-                        'value' => 'DOM'
+                        'value' => 'DOM',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.INTL',
-                        'value' => 'INTL'
+                        'value' => 'INTL',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.POSTAL',
-                        'value' => 'POSTAL'
+                        'value' => 'POSTAL',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.PARCEL',
-                        'value' => 'PARCEL'
+                        'value' => 'PARCEL',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.HOME',
-                        'value' => 'HOME'
+                        'value' => 'HOME',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_address.type.WORK',
-                        'value' => 'WORK'
+                        'value' => 'WORK',
                     ],
                 ],
                 'size' => 5,
@@ -198,7 +198,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'street_number' => [
@@ -207,7 +207,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'addition1' => [
@@ -216,7 +216,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'addition2' => [
@@ -225,7 +225,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'zip' => [
@@ -234,7 +234,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'city' => [
@@ -243,7 +243,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'region' => [
@@ -252,7 +252,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'country' => [
@@ -275,7 +275,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim,Extcode\\Contacts\\DataHandler\\EvalFloat8'
+                'eval' => 'trim,Extcode\\Contacts\\DataHandler\\EvalFloat8',
             ],
         ],
         'lon' => [
@@ -284,7 +284,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim,Extcode\\Contacts\\DataHandler\\EvalFloat8'
+                'eval' => 'trim,Extcode\\Contacts\\DataHandler\\EvalFloat8',
             ],
         ],
         'post_box' => [
@@ -293,7 +293,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'contact' => [
@@ -329,12 +329,12 @@ return [
                         'hide' => true,
                         'delete' => true,
                         'localize' => true,
-                    ]
+                    ],
                 ],
                 'inline' => [
                     'inlineNewButtonStyle' => 'display: inline-block;',
                 ],
-            ]
+            ],
         ],
     ],
 ];

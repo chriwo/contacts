@@ -17,11 +17,11 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 class CompanyController extends ContactsActionController
 {
-
     protected int $pageId;
 
     public function __construct(protected CompanyRepository $companyRepository)
-    {}
+    {
+    }
 
     protected function initializeAction(): void
     {

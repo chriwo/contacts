@@ -12,6 +12,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model;
 use Extcode\Contacts\Domain\Model\Contact;
 use InvalidArgumentException;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class ContactTest extends UnitTestCase
 {
@@ -59,67 +60,67 @@ class ContactTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getSalutationInitiallyReturnsSalutation(): void
     {
-        $this->assertSame(
+        self::assertSame(
             $this->salutation,
             $this->fixture->getSalutation()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setSalutationSetsSalutation(): void
     {
         $this->fixture->setSalutation('Salutation new');
 
-        $this->assertSame(
+        self::assertSame(
             'Salutation new',
             $this->fixture->getSalutation()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getTitleInitiallyReturnsTitle(): void
     {
-        $this->assertSame(
+        self::assertSame(
             $this->title,
             $this->fixture->getTitle()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setTitleSetsTitle(): void
     {
         $this->fixture->setTitle('Title new');
 
-        $this->assertSame(
+        self::assertSame(
             'Title new',
             $this->fixture->getTitle()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getFirstNameInitiallyReturnsFirstName(): void
     {
-        $this->assertSame(
+        self::assertSame(
             $this->firstName,
             $this->fixture->getFirstName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setFirstNameSetsFirstName(): void
     {
         $this->fixture->setFirstName('Firstname new');
 
-        $this->assertSame(
+        self::assertSame(
             'Firstname new',
             $this->fixture->getFirstName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setFirstNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -129,27 +130,27 @@ class ContactTest extends UnitTestCase
         $this->fixture->setFirstName('');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getLastNameInitiallyReturnsLastName(): void
     {
-        $this->assertSame(
+        self::assertSame(
             $this->lastName,
             $this->fixture->getLastName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLastNameSetsLastName(): void
     {
         $this->fixture->setLastName('Lastname new');
 
-        $this->assertSame(
+        self::assertSame(
             'Lastname new',
             $this->fixture->getLastName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setLastNameWithEmptyStringThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -159,82 +160,82 @@ class ContactTest extends UnitTestCase
         $this->fixture->setLastName('');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getBirthdayInitiallyReturnsZero(): void
     {
-        $this->assertNull(
+        self::assertNull(
             $this->fixture->getBirthday()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setBirthdaySetsBirthday(): void
     {
         $birthdate = new \DateTime('2019-05-05');
 
         $this->fixture->setBirthday($birthdate);
 
-        $this->assertSame(
+        self::assertSame(
             $birthdate,
             $this->fixture->getBirthday()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getTeaser()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setTeaserSetsTeaser(): void
     {
         $this->fixture->setTeaser('Teaser');
 
-        $this->assertSame(
+        self::assertSame(
             'Teaser',
             $this->fixture->getTeaser()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setDescriptionSetsDescription(): void
     {
         $this->fixture->setDescription('Description');
 
-        $this->assertSame(
+        self::assertSame(
             'Description',
             $this->fixture->getDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getMetaDescriptionInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getMetaDescription()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setMetaDescriptionSetsMetaDescription(): void
     {
         $this->fixture->setMetaDescription('MetaDescription');
 
-        $this->assertSame(
+        self::assertSame(
             'MetaDescription',
             $this->fixture->getMetaDescription()
         );

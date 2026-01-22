@@ -19,7 +19,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class ItemsProcFunc
 {
-
     /** @var TemplateLayout $templateLayoutsUtility */
     protected $templateLayoutsUtility;
 
@@ -46,7 +45,7 @@ class ItemsProcFunc
             foreach ($templateLayouts as $layout) {
                 $additionalLayout = [
                     htmlspecialchars($this->getLanguageService()->sL($layout[0])),
-                    $layout[1]
+                    $layout[1],
                 ];
                 $config['items'][] = $additionalLayout;
             }

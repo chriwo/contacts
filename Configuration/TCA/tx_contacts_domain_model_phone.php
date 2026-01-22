@@ -35,7 +35,7 @@ return [
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
                     --palette--;' . $_LLL_tca . ':palettes.visibility;hiddenonly,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,
-            '
+            ',
         ],
     ],
     'palettes' => [
@@ -76,14 +76,14 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'max' => 255,
-            ]
+            ],
         ],
         'hidden' => [
             'exclude' => 1,
             'label' => $_LLL_core_general . ':LGL.hidden',
             'config' => [
                 'type' => 'check',
-                'renderType' => 'checkboxToggle'
+                'renderType' => 'checkboxToggle',
             ],
         ],
         'starttime' => [
@@ -95,7 +95,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -108,7 +108,7 @@ return [
                 'checkbox' => 0,
                 'default' => 0,
                 'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
                 ],
             ],
         ],
@@ -121,55 +121,55 @@ return [
                 'items' => [
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.PREF',
-                        'value' => 'PREF'
+                        'value' => 'PREF',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.WORK',
-                        'value' => 'WORK'
+                        'value' => 'WORK',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.HOME',
-                        'value' => 'HOME'
+                        'value' => 'HOME',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.VOICE',
-                        'value' => 'VOICE'
+                        'value' => 'VOICE',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.FAX',
-                        'value' => 'FAX'
+                        'value' => 'FAX',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.MSG',
-                        'value' => 'MSG'
+                        'value' => 'MSG',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.CELL',
-                        'value' => 'CELL'
+                        'value' => 'CELL',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.PAGER',
-                        'value' => 'PAGER'
+                        'value' => 'PAGER',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.BBS',
-                        'value' => 'BBS'
+                        'value' => 'BBS',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.MODEM',
-                        'value' => 'MODEM'
+                        'value' => 'MODEM',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.CAR',
-                        'value' => 'CAR'
+                        'value' => 'CAR',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.ISDN',
-                        'value' => 'ISDN'
+                        'value' => 'ISDN',
                     ],
                     [
                         'label' => $_LLL_db . ':tx_contacts_domain_model_phone.type.VIDEO',
-                        'value' => 'VIDEO'
+                        'value' => 'VIDEO',
                     ],
                 ],
                 'size' => 5,
@@ -184,7 +184,7 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim',
-                'required' => true
+                'required' => true,
             ],
         ],
         'contact' => [

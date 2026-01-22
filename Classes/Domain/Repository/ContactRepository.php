@@ -57,7 +57,7 @@ class ContactRepository extends Repository
         if (!empty($demand->getOrderBy())) {
             $query->setOrderings(
                 [
-                    $demand->getOrderBy() => QueryInterface::ORDER_ASCENDING
+                    $demand->getOrderBy() => QueryInterface::ORDER_ASCENDING,
                 ]
             );
         }

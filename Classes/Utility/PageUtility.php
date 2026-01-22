@@ -1,6 +1,7 @@
 <?php
 
 namespace Extcode\Contacts\Utility;
+
 /*
  * This file is part of the package extcode/contacts.
  *
@@ -17,7 +18,6 @@ use TYPO3\CMS\Core\Utility\StringUtility;
 
 class PageUtility
 {
-
     /**
      * Find all ids from given ids and level
      */

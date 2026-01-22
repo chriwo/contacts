@@ -29,7 +29,7 @@ class MetaTagViewHelper extends AbstractViewHelper
      * @var string
      */
     protected $tagName = 'meta';
-    public function __construct(private readonly \TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry $metaTagManagerRegistry)
+    public function __construct(private readonly MetaTagManagerRegistry $metaTagManagerRegistry)
     {
     }
 

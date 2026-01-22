@@ -16,11 +16,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
-
     protected CategoryRepository $categoryRepository;
     protected PageRepository $pageRepository;
-    public function __construct(\TYPO3\CMS\Core\Domain\Repository\PageRepository $pageRepository, \Extcode\Contacts\Domain\Repository\CategoryRepository $categoryRepository)
+    public function __construct(PageRepository $pageRepository, CategoryRepository $categoryRepository)
     {
         $this->pageRepository = $pageRepository;
         $this->categoryRepository = $categoryRepository;
@@ -33,7 +31,7 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      *
      * @return Demand
      */
-    protected function createDemandObjectFromSettings(array $settings) : Demand
+    protected function createDemandObjectFromSettings(array $settings): Demand
     {
         $demand = new Demand();
         $this->addCategoriesToDemandObjectFromSettings($demand);
@@ -112,7 +110,7 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
             $translatedCategories[] = [
                 'uid' => $category['uid'],
-                'title' => $category['title']
+                'title' => $category['title'],
             ];
         }
 

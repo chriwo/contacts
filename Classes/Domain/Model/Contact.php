@@ -15,7 +15,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
 
 class Contact extends AbstractContact
 {
-
     protected string $salutation = '';
 
     protected string $title = '';

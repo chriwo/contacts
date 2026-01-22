@@ -12,6 +12,7 @@ namespace Extcode\Contacts\Tests\Unit\Domain\Model;
 use Extcode\Contacts\Domain\Model\Country;
 use TYPO3\CMS\Extbase\Property\Exception;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class CountryTest extends UnitTestCase
 {
@@ -30,27 +31,27 @@ class CountryTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getIso2InitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getIso2()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso2SetsIso2(): void
     {
         $this->fixture->setIso2('DE');
 
-        $this->assertSame(
+        self::assertSame(
             'DE',
             $this->fixture->getIso2()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso2WithLessThanTwoDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -60,7 +61,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso2('DEU');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso2WithMoreThanTwoDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -70,38 +71,38 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso2('DEU');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getIso3InitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getIso3()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso3SetsIso3(): void
     {
         $this->fixture->setIso3('DEU');
 
-        $this->assertSame(
+        self::assertSame(
             'DEU',
             $this->fixture->getIso3()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso3WithEmptyStringSetsIso3ToEmptyString(): void
     {
         $this->fixture->setIso3('');
 
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getIso3()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso3WithNoEmptyStringAndLessThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -111,7 +112,7 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso3('DE');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setIso3WithNoEmptyStringAndMoreThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
@@ -121,21 +122,21 @@ class CountryTest extends UnitTestCase
         $this->fixture->setIso3('DEUT');
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function getNameInitiallyReturnsEmptyString(): void
     {
-        $this->assertSame(
+        self::assertSame(
             '',
             $this->fixture->getName()
         );
     }
 
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function setNameSetsName(): void
     {
         $this->fixture->setName('Name new');
 
-        $this->assertSame(
+        self::assertSame(
             'Name new',
             $this->fixture->getName()
         );

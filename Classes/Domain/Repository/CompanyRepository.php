@@ -16,7 +16,6 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 
 class CompanyRepository extends Repository
 {
-
     public function findDemanded(Demand $demand): QueryResultInterface|array
     {
         // settings
@@ -57,7 +56,7 @@ class CompanyRepository extends Repository
         if (!empty($demand->getOrderBy())) {
             $query->setOrderings(
                 [
-                    $demand->getOrderBy() => QueryInterface::ORDER_ASCENDING
+                    $demand->getOrderBy() => QueryInterface::ORDER_ASCENDING,
                 ]
             );
         }
