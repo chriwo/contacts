@@ -20,14 +20,9 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
     protected CategoryRepository $categoryRepository;
     protected PageRepository $pageRepository;
-
-    public function injectPageRepository(PageRepository $pageRepository)
+    public function __construct(\TYPO3\CMS\Core\Domain\Repository\PageRepository $pageRepository, \Extcode\Contacts\Domain\Repository\CategoryRepository $categoryRepository)
     {
         $this->pageRepository = $pageRepository;
-    }
-
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
         $this->categoryRepository = $categoryRepository;
     }
 

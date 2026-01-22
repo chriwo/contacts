@@ -11,11 +11,17 @@ namespace Extcode\Contacts\Domain\Repository;
 
 use Extcode\Contacts\Domain\Model\Dto\AddressSearch;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 class AddressRepository extends Repository
 {
+    /**
+     * Constructs a new Repository
+     */
+    public function __construct(private readonly \TYPO3\CMS\Core\Database\ConnectionPool $connectionPool)
+    {
+        parent::__construct();
+    }
     public function findByDistance(AddressSearch $addressSearch): array
     {
         $companyUids = [];
@@ -75,7 +81,7 @@ class AddressRepository extends Repository
             return [];
         }
 
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('tx_contacts_domain_model_company');
         $queryBuilder
             ->select('*')
@@ -116,7 +122,7 @@ class AddressRepository extends Repository
             return [];
         }
 
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('tx_contacts_domain_model_contact');
         $queryBuilder
             ->select('*')
@@ -157,7 +163,7 @@ class AddressRepository extends Repository
             return [];
         }
 
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('tx_contacts_domain_model_phone');
         $queryResult = $queryBuilder
             ->select('*')
@@ -176,7 +182,7 @@ class AddressRepository extends Repository
 
     protected function getImages(string $tableName, string $fieldName, array $ids): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('sys_file_reference');
         $queryResult = $queryBuilder
             ->select('uid', 'uid_foreign')
@@ -199,7 +205,7 @@ class AddressRepository extends Repository
 
     protected function getCategories(string $tableName, string $fieldName, array $ids): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('sys_category_record_mm');
         $queryResult = $queryBuilder
             ->select('uid_local', 'uid_foreign')
@@ -222,7 +228,7 @@ class AddressRepository extends Repository
 
     protected function findAddressesByDistance(AddressSearch $addressSearch): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('tx_contacts_domain_model_address');
         $queryBuilder
             ->select('tx_contacts_domain_model_address.*')
@@ -288,7 +294,7 @@ class AddressRepository extends Repository
 
     protected function findCountries(): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('tx_contacts_domain_model_country');
         $queryResult = $queryBuilder
             ->select('uid', 'pid', 'iso2', 'iso3', 'name', 'tld', 'phone_country_code')

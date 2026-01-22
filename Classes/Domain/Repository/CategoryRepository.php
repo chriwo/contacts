@@ -11,12 +11,18 @@ namespace Extcode\Contacts\Domain\Repository;
 
 use Extcode\Contacts\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 class CategoryRepository extends Repository
 {
+    /**
+     * Constructs a new Repository
+     */
+    public function __construct(private readonly \TYPO3\CMS\Core\Database\ConnectionPool $connectionPool)
+    {
+        parent::__construct();
+    }
     public function findAllAsRecursiveTreeArray(Category $selectedCategory = null): array
     {
         $categoriesArray = $this->findAllAsArray($selectedCategory);
@@ -100,7 +106,7 @@ class CategoryRepository extends Repository
             return $categories;
         }
 
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+        $queryBuilder = $this->connectionPool
             ->getQueryBuilderForTable('sys_category');
         $queryBuilder
             ->select('*')

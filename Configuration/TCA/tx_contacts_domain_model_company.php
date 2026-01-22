@@ -1,7 +1,5 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 defined('TYPO3') or die();
 
 $_LLL_core_general = 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf';

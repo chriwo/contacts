@@ -29,9 +29,7 @@ class AddressSearchTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLatInitiallyReturnsZeroFloat(): void
     {
         $this->assertSame(
@@ -40,9 +38,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLatSetsLat(): void
     {
         $lat = 54.6717825;
@@ -55,9 +51,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLonInitiallyReturnsZeroFloat(): void
     {
         $this->assertSame(
@@ -66,9 +60,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLonSetsLon(): void
     {
         $lon = 13.4308058;
@@ -81,9 +73,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getRadiusInitiallyReturnsZeroInt(): void
     {
         $this->assertSame(
@@ -92,9 +82,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setRadiusSetsRadius(): void
     {
         $radius = 10;
@@ -107,9 +95,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getPidsInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -117,9 +103,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setPidsSetsPids(): void
     {
         $pids = '10, 30';
@@ -132,9 +116,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -142,9 +124,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setSearchStringSetsSearchString(): void
     {
         $searchString = 'Search String';
@@ -157,9 +137,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -167,9 +145,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setOrderBySetsOrderBy(): void
     {
         $orderBy = 'distance';
@@ -182,9 +158,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getFallbackOrderByInitiallyReturnsEmptyString(): void
     {
         $this->assertEmpty(
@@ -192,9 +166,7 @@ class AddressSearchTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setFallbackOrderBySetsFallbackOrderBy(): void
     {
         $fallbackOrderBy = 'title';

@@ -2,7 +2,6 @@
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 $_LLL_db = 'LLL:EXT:contacts/Resources/Private/Language/locallang_db.xlf:';

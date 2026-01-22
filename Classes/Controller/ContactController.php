@@ -14,7 +14,6 @@ use Extcode\Contacts\Domain\Repository\ContactRepository;
 use Extcode\Contacts\Controller\ActionController as ContactsActionController;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 
 class ContactController extends ContactsActionController
 {
@@ -32,7 +31,7 @@ class ContactController extends ContactsActionController
         if ($GLOBALS['TSFE'] === null) {
             $this->pageId = (int)($this->request->getParsedBody()['id'] ?? $this->request->getQueryParams()['id'] ?? null);
         } else {
-            $this->pageId = $GLOBALS['TSFE']->id;
+            $this->pageId = $this->request->getAttribute('frontend.page.information')->getId();
         }
 
         $frameworkConfiguration = $this->configurationManager->getConfiguration(

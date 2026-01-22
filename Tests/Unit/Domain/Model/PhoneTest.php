@@ -29,9 +29,7 @@ class PhoneTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
         $this->assertSame(
@@ -40,9 +38,7 @@ class PhoneTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setValidTypeSetsType(): void
     {
         $this->fixture->setType('CELL');
@@ -53,9 +49,7 @@ class PhoneTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setInvalidTypeThrowsException(): void
     {
         $this->expectException(\InvalidArgumentException::class);
@@ -65,9 +59,7 @@ class PhoneTest extends UnitTestCase
         $this->fixture->setType('inValidType');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getNumberInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -76,9 +68,7 @@ class PhoneTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setNumberSetsNumber(): void
     {
         $this->fixture->setNumber('foo bar');

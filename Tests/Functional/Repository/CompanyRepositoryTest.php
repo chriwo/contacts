@@ -48,9 +48,7 @@ class CompanyRepositoryTest extends FunctionalTestCase
         unset($this->objectManager);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function findDemandedAndOrderByName(): void
     {
         $demand = new Demand();

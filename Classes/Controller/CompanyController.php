@@ -28,7 +28,7 @@ class CompanyController extends ContactsActionController
         if ($GLOBALS['TSFE'] === null) {
             $this->pageId = (int)($this->request->getParsedBody()['id'] ?? $this->request->getQueryParams()['id'] ?? null);
         } else {
-            $this->pageId = $GLOBALS['TSFE']->id;
+            $this->pageId = $this->request->getAttribute('frontend.page.information')->getId();
         }
 
         $frameworkConfiguration = $this->configurationManager->getConfiguration(

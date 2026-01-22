@@ -10,7 +10,6 @@ namespace Extcode\Contacts\ViewHelpers;
  */
 
 use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -30,6 +29,9 @@ class MetaTagViewHelper extends AbstractViewHelper
      * @var string
      */
     protected $tagName = 'meta';
+    public function __construct(private readonly \TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry $metaTagManagerRegistry)
+    {
+    }
 
     public function initializeArguments()
     {
@@ -52,7 +54,7 @@ class MetaTagViewHelper extends AbstractViewHelper
      */
     public function render()
     {
-        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)
+        $metaTagManager = $this->metaTagManagerRegistry
             ->getManagerForProperty($this->arguments['property']);
         $metaTagManager->addProperty(
             $this->arguments['property'],

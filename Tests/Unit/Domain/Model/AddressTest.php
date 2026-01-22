@@ -31,9 +31,7 @@ class AddressTest extends UnitTestCase
         unset($this->fixture);
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
         $this->assertSame(
@@ -42,9 +40,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setValidTypeSetsType(): void
     {
         $this->fixture->setType('DOM');
@@ -55,9 +51,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setInvalidTypeThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -67,9 +61,7 @@ class AddressTest extends UnitTestCase
         $this->fixture->setType('inValidType');
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getStreetInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -78,9 +70,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setStreetSetsStreet(): void
     {
         $this->fixture->setStreet('Street');
@@ -91,9 +81,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getStreetNumberInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -102,9 +90,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setStreetNumberSetsStreetNumber(): void
     {
         $this->fixture->setStreetNumber('Street Number');
@@ -115,9 +101,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getAddition1InitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -126,9 +110,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setAddition1SetsAddition1(): void
     {
         $this->fixture->setAddition1('Addition1');
@@ -139,9 +121,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getAddition2InitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -150,9 +130,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setAddition1SetsAddition2(): void
     {
         $this->fixture->setAddition2('Addition2');
@@ -163,9 +141,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getZipInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -174,9 +150,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setZipSetsZip(): void
     {
         $this->fixture->setZip('ZIP');
@@ -187,9 +161,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getCityInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -198,9 +170,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setCitySetsCity(): void
     {
         $this->fixture->setCity('City');
@@ -211,9 +181,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getRegionInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -222,9 +190,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setRegionSetsRegion(): void
     {
         $this->fixture->setRegion('Region');
@@ -235,9 +201,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getCountryInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -246,9 +210,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setCountrySetsCountry(): void
     {
         $country = new Country();
@@ -262,9 +224,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getPostBoxInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -273,9 +233,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setPostBoxSetsPostBox(): void
     {
         $this->fixture->setPostBox('Post Box');
@@ -286,9 +244,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLatInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -297,9 +253,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLatSetsLat(): void
     {
         $this->fixture->setLat('52° 31′ N');
@@ -310,9 +264,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function getLonInitiallyReturnsEmptyString(): void
     {
         $this->assertSame(
@@ -321,9 +273,7 @@ class AddressTest extends UnitTestCase
         );
     }
 
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function setLonSetsLon(): void
     {
         $this->fixture->setLon('13° 24′ O');
