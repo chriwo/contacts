@@ -11,7 +11,8 @@ ehthumbs.db
 Thumbs.db
 .svn
 
-Build/.phpunit.result.cache
+.phpunit.result.cache
+.phpunit.cache
 /.build
 .sass-cache
 composer.lock

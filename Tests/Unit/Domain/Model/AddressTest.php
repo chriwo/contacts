@@ -205,8 +205,7 @@ class AddressTest extends UnitTestCase
     #[Test]
     public function getCountryInitiallyReturnsEmptyString(): void
     {
-        self::assertSame(
-            '',
+        self::assertNull(
             $this->fixture->getCountry()
         );
     }

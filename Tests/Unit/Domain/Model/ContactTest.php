@@ -16,25 +16,13 @@ use PHPUnit\Framework\Attributes\Test;
 
 class ContactTest extends UnitTestCase
 {
-    /**
-     * @var string
-     */
-    protected $salutation;
+    protected string $salutation = '';
 
-    /**
-     * @var string
-     */
-    protected $title;
+    protected string $title = '';
 
-    /**
-     * @var string
-     */
-    protected $firstName;
+    protected string $firstName = '';
 
-    /**
-     * @var string
-     */
-    protected $lastName;
+    protected string $lastName = '';
 
     /**
      * @var Contact

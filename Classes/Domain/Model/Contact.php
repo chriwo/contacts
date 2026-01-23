@@ -25,7 +25,7 @@ class Contact extends AbstractContact
     #[Validate(['validator' => 'NotEmpty'])]
     protected string $lastName;
 
-    protected \DateTime $birthday;
+    protected ?\DateTime $birthday = null;
 
     /**
      * @var ObjectStorage<Company>
@@ -38,7 +38,7 @@ class Contact extends AbstractContact
         string $salutation,
         string $title,
         string $firstName,
-        string $lastName
+        string $lastName,
     ) {
         parent::__construct();
         $this->salutation = $salutation;
@@ -133,11 +133,7 @@ class Contact extends AbstractContact
 
     public function getBirthday(): ?\DateTime
     {
-        if ($this->birthday) {
-            return $this->birthday;
-        }
-
-        return null;
+        return $this->birthday;
     }
 
     public function addCompany(Company $company): void
