@@ -54,19 +54,17 @@ class CountryTest extends UnitTestCase
     #[Test]
     public function setIso2WithLessThanTwoDigitThrowsException(): void
     {
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('The iso2 code has to have two chars.');
-        $this->expectExceptionCode(1395925918);
+        self::expectException(Exception::class);
+        self::expectExceptionCode(1395925918);
 
-        $this->fixture->setIso2('DEU');
+        $this->fixture->setIso2('D');
     }
 
     #[Test]
     public function setIso2WithMoreThanTwoDigitThrowsException(): void
     {
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('The iso2 code has to have two chars.');
-        $this->expectExceptionCode(1395925918);
+        self::expectException(Exception::class);
+        self::expectExceptionCode(1395925918);
 
         $this->fixture->setIso2('DEU');
     }
@@ -106,7 +104,7 @@ class CountryTest extends UnitTestCase
     public function setIso3WithNoEmptyStringAndLessThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage('The iso3 code has to have three chars.');
+        $this->expectExceptionMessage('The iso3 code has to have three chars. The used iso3 code has 2 char(s).');
         $this->expectExceptionCode(1395925960);
 
         $this->fixture->setIso3('DE');
@@ -116,7 +114,7 @@ class CountryTest extends UnitTestCase
     public function setIso3WithNoEmptyStringAndMoreThanThreeDigitThrowsException(): void
     {
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage('The iso3 code has to have three chars.');
+        $this->expectExceptionMessage('The iso3 code has to have three chars. The used iso3 code has 4 char(s).');
         $this->expectExceptionCode(1395925960);
 
         $this->fixture->setIso3('DEUT');

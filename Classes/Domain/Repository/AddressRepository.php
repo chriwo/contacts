@@ -257,10 +257,14 @@ class AddressRepository extends Repository
                 );
         }
 
-        if ($addressSearch->getOrderBy() !== 'distance') {
-            $queryBuilder->orderBy($addressSearch->getOrderBy());
-        } elseif ($addressSearch->getOrderBy() === 'distance' && $addressSearch->getFallbackOrderBy()) {
-            $queryBuilder->orderBy($addressSearch->getFallbackOrderBy());
+        if (!empty($addressSearch->getOrderBy())) {
+            if ($addressSearch->getOrderBy() !== 'distance') {
+                $queryBuilder->orderBy($addressSearch->getOrderBy());
+            }
+
+            if ($addressSearch->getOrderBy() === 'distance' && $addressSearch->getFallbackOrderBy()) {
+                $queryBuilder->orderBy($addressSearch->getFallbackOrderBy());
+            }
         }
 
         $addresses = $queryBuilder->executeQuery()->fetchAllAssociative();

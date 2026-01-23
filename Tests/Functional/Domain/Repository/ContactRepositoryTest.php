@@ -1,6 +1,6 @@
 <?php
 
-namespace Extcode\Contacts\Tests\Functional\Repository;
+namespace Extcode\Contacts\Tests\Functional\Domain\Repository;
 
 /*
  * This file is part of the package extcode/contacts.
@@ -12,41 +12,31 @@ namespace Extcode\Contacts\Tests\Functional\Repository;
 use Extcode\Contacts\Domain\Model\Dto\Demand;
 use Extcode\Contacts\Domain\Repository\ContactRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use PHPUnit\Framework\Attributes\Test;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 
 class ContactRepositoryTest extends FunctionalTestCase
 {
-    /**
-     * @var ObjectManagerInterface
-     */
-    protected $objectManager;
+    protected ?ContactRepository $contactRepository;
 
-    /**
-     * @var ContactRepository
-     */
-    protected $contactRepository;
-
-    protected $testExtensionsToLoad = [
-        'typo3conf/ext/contacts',
+    protected array $testExtensionsToLoad = [
+        'extcode/contacts',
     ];
 
+    #[\Override]
     public function setUp(): void
     {
         parent::setUp();
-        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        $this->contactRepository = $this->objectManager->get(ContactRepository::class);
+        $this->contactRepository = GeneralUtility::makeInstance(ContactRepository::class);
 
-        $this->importDataSet(__DIR__ . '/../Fixtures/pages.xml');
-        $this->importDataSet(__DIR__ . '/../Fixtures/tx_contacts_domain_model_contact.xml');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/pages.csv');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/tx_contacts_domain_model_contact.csv');
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->contactRepository);
-        unset($this->objectManager);
     }
 
     #[Test]

@@ -39,6 +39,8 @@ class Address extends AbstractEntity
 
     protected string $lat = '';
 
+    protected string $lon = '';
+
     /**
      * @var ObjectStorage<TtContent>
      */
@@ -193,9 +195,9 @@ class Address extends AbstractEntity
         $this->lon = $lon;
     }
 
-    public function getLon(): ?float
+    public function getLon(): string
     {
-        return $this->lon ?? null;
+        return $this->lon;
     }
 
     public function setContact(Contact $contact): void

@@ -30,9 +30,9 @@ class Country extends AbstractEntity
 
     public function setIso2(string $iso2): void
     {
-        if (strlen($iso2) != 2) {
+        if (strlen($iso2) !== 2) {
             throw new Exception(
-                'The iso2 code has to have two chars.',
+                sprintf('The iso2 code has to have two chars. The used iso2 code has %s char(s).', strlen($iso2)),
                 1395925918
             );
         }
@@ -47,9 +47,9 @@ class Country extends AbstractEntity
 
     public function setIso3(string $iso3): void
     {
-        if ((strlen($iso3) != 0) and (strlen($iso3) != 3)) {
+        if ((strlen($iso3) !== 0) && (strlen($iso3) !== 3)) {
             throw new Exception(
-                'The iso3 code has to have three chars.',
+                sprintf('The iso3 code has to have three chars. The used iso3 code has %s char(s).', strlen($iso3)),
                 1395925960
             );
         }

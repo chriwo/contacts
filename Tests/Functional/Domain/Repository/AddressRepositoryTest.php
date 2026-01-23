@@ -1,6 +1,6 @@
 <?php
 
-namespace Extcode\Contacts\Tests\Functional\Repository;
+namespace Extcode\Contacts\Tests\Functional\Domain\Repository;
 
 /*
  * This file is part of the package extcode/contacts.
@@ -12,43 +12,33 @@ namespace Extcode\Contacts\Tests\Functional\Repository;
 use Extcode\Contacts\Domain\Model\Dto\AddressSearch;
 use Extcode\Contacts\Domain\Repository\AddressRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 use PHPUnit\Framework\Attributes\Test;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 
 class AddressRepositoryTest extends FunctionalTestCase
 {
-    /**
-     * @var ObjectManagerInterface
-     */
-    protected $objectManager;
+    protected ?AddressRepository $addressRepository;
 
-    /**
-     * @var AddressRepository
-     */
-    protected $addressRepository;
-
-    protected $testExtensionsToLoad = [
-        'typo3conf/ext/contacts',
+    protected array $testExtensionsToLoad = [
+        'extcode/contacts',
     ];
 
+    #[\Override]
     public function setUp(): void
     {
         parent::setUp();
-        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        $this->addressRepository = $this->objectManager->get(AddressRepository::class);
+        $this->addressRepository = GeneralUtility::makeInstance(AddressRepository::class);
 
-        $this->importDataSet(__DIR__ . '/../Fixtures/pages.xml');
-        $this->importDataSet(__DIR__ . '/../Fixtures/tx_contacts_domain_model_country.xml');
-        $this->importDataSet(__DIR__ . '/../Fixtures/tx_contacts_domain_model_company.xml');
-        $this->importDataSet(__DIR__ . '/../Fixtures/tx_contacts_domain_model_address.xml');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/pages.csv');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/tx_contacts_domain_model_country.csv');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/tx_contacts_domain_model_company.csv');
+        $this->importCSVDataSet(__DIR__ . '/../../Fixtures/tx_contacts_domain_model_address.csv');
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->addressRepository);
-        unset($this->objectManager);
     }
 
     #[Test]

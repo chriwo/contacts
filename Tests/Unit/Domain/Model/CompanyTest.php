@@ -16,12 +16,7 @@ use PHPUnit\Framework\Attributes\Test;
 
 class CompanyTest extends UnitTestCase
 {
-    /**
-     * Name
-     *
-     * @var string
-     */
-    protected $name;
+    protected string $name = '';
 
     /**
      * @var Company
