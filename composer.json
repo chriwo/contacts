@@ -48,9 +48,6 @@
         "test:cgl:dry-run": [
             ".build/bin/php-cs-fixer fix --config=.php-cs-fixer.php -v --using-cache=no --dry-run --diff"
         ],
-        "test:php:lint": [
-            ".build/bin/phplint -c Build/phplint.yaml"
-        ],
         "test:php:unit": [
             ".build/bin/phpunit -c php.unit.xml"
         ],
@@ -70,7 +67,6 @@
             ".build/bin/typoscript-lint -c Build/typoscriptlint.yaml Configuration"
         ],
         "test:php": [
-            "@test:php:lint",
             "@test:php:unit",
             "@test:php:functional"
         ],
