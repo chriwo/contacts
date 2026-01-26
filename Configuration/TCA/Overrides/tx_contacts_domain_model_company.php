@@ -16,7 +16,7 @@ $GLOBALS['TCA']['tx_contacts_domain_model_company']['columns']['category'] = [
         'foreign_table' => 'sys_category',
         'foreign_table_where' => 'AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC',
         'items' => [
-            ['', 0],
+            ['label' => '', 'value' => 0],
         ],
         'minitems' => 0,
         'maxitems' => 1,
@@ -34,7 +34,7 @@ $GLOBALS['TCA']['tx_contacts_domain_model_company']['columns']['categories'] = [
         'foreign_table' => 'sys_category',
         'foreign_table_where' => 'AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC',
         'items' => [
-            ['', 0],
+            ['label' => '', 'value' => 0],
         ],
         'minitems' => 0,
         'maxitems' => 9999,
