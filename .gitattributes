@@ -30,5 +30,6 @@
 /phpunit.unit.xml               export-ignore
 /Tests/                         export-ignore
 /config                         export-ignore
+/Build/                         export-ignore
 
 .project/data/db.sql.gz filter=lfs diff=lfs merge=lfs -text
