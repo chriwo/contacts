@@ -463,12 +463,6 @@ parameters:
 			path: Classes/Controller/ContactController.php
 
 		-
-			message: '#^PHPDoc tag @var has invalid value \(\$typoScriptFrontendController TypoScriptFrontendController\)\: Unexpected token "\$typoScriptFrontendController", expected type at offset 9 on line 1$#'
-			identifier: phpDoc.parseError
-			count: 1
-			path: Classes/Controller/ContactController.php
-
-		-
 			message: '#^Parameter \#1 \$uids of method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:findByUids\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
