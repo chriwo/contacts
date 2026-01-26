@@ -34,6 +34,7 @@ return [
                 number,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,
                     --palette--;' . $_LLL_tca . ':palettes.visibility;hiddenonly,
+                    --palette--;;paletteLanguage,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,
             ',
         ],
@@ -44,6 +45,12 @@ return [
         ],
         'access' => [
             'showitem' => 'starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel, endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
+        ],
+        'paletteLanguage' => [
+            'showitem' => '
+                sys_language_uid;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:sys_language_uid_formlabel,l10n_parent,
+                l10n_diffsource,
+            ',
         ],
     ],
     'columns' => [
@@ -56,13 +63,12 @@ return [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['label' => '', 'value' => 0],
-                ],
-                'foreign_table' => 'tx_contacts_domain_model_phone',
-                'foreign_table_where' => 'AND tx_contacts_domain_model_phone.pid=###CURRENT_PID### AND tx_contacts_domain_model_phone.sys_language_uid IN (-1,0)',
+                'type' => 'group',
+                'allowed' => 'tx_contacts_domain_model_phone',
+                'size' => 1,
+                'maxitems' => 1,
+                'minitems' => 0,
+                'default' => 0,
             ],
         ],
         'l10n_diffsource' => [
