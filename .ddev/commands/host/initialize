@@ -15,3 +15,6 @@ ddev import-db --file=.project/data/db.sql.gz
 
 cp .build/vendor/typo3/cms-install/Resources/Private/FolderStructureTemplateFiles/root-htaccess .build/public/.htaccess
 mkdir -p config && cp -Rf .project/typo3/config/ config
+
+ddev exec php ./bin/typo3 database:updateschema
+ddev exec php ./bin/typo3 install:fixfolderstructure
