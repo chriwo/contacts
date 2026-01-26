@@ -66,7 +66,7 @@ class CompanyController extends ContactsActionController
         return $this->htmlResponse();
     }
 
-    public function showAction(Company $company = null): ResponseInterface
+    public function showAction(?Company $company = null): ResponseInterface
     {
         if (!$company && (int)$this->settings['company']) {
             $company = $this->companyRepository->findByUid((int)$this->settings['company']);
