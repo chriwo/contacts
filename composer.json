@@ -58,7 +58,7 @@
             "typo3DatabaseDriver=\"pdo_sqlite\" .build/bin/phpunit -c phpunit.functional.xml"
         ],
         "test:phpstan:analyse": [
-            ".build/bin/phpstan analyse -c Build/phpstan.neon"
+            ".build/bin/phpstan analyse -c phpstan.neon"
         ],
         "test:rector:process": [
             ".build/bin/rector process -c rector.php --clear-cache --output-format=console"
@@ -101,7 +101,7 @@
         "helhum/dotenv-connector": "^3.2",
         "helhum/typo3-console": "^8.3",
         "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan": "2.1.33",
         "phpstan/phpstan-phpunit": "^2.0",
         "saschaegerer/phpstan-typo3": "^2.1",
         "ssch/typo3-rector": "^3.11",

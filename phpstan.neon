@@ -9,5 +9,8 @@ parameters:
     - .build
     - .ddev
     - .github
-    - ../../config (?)
-    - ../../var (?)
+    - .phpunit.cache (?)
+    - config (?)
+    - var (?)
+    - Resources
+    - Documentation

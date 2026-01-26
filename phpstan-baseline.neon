@@ -1,0 +1,2215 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Binary operation "\-" between mixed and int\<0, max\> results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Binary operation "\." between '','' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''geometry'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''googleMapsApiKey'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''lat'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''lng'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''location'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''results'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''status'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Command\\GeocodeCommand\:\:geocode\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Parameter \#1 \$json of function json_decode expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Parameter \#2 \$max of class Symfony\\Component\\Console\\Helper\\ProgressBar constructor expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Command\\GeocodeCommand\:\:\$googleMapsApiKey \(string\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Classes/Command/GeocodeCommand.php
+
+		-
+			message: '#^Cannot access offset ''category'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Cannot access offset ''searchString'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 2
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Controller\\ActionController\:\:createDemandObjectFromSettings\(\) has parameter \$settings with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Controller\\ActionController\:\:getSelectedCategories\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Parameter \#1 \$orderBy of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setOrderBy\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Parameter \#1 \$parentCategory of method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findSubcategoriesRecursiveAsArray\(\) expects TYPO3\\CMS\\Extbase\\Domain\\Model\\Category, TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Parameter \#1 \$searchString of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setSearchString\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Parameter \#2 \$originalRow of method TYPO3\\CMS\\Core\\Domain\\Repository\\PageRepository\:\:getLanguageOverlay\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Parameter \#2 \$string of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:intExplode\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ActionController.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Binary operation "\." between mixed and '' must implement…'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Call to function is_array\(\) with array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''AddressSearchAddressesLoadedHook'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''EXTCONF'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''contacts'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''country'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''radius'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''searchWord'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''zip'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 2
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$className of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:makeInstance\(\) expects class\-string\<object\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$country of method Extcode\\Contacts\\Domain\\Repository\\ZipRepository\:\:findByCountryAndZip\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$fallbackOrderBy of method Extcode\\Contacts\\Domain\\Model\\Dto\\AddressSearch\:\:setFallbackOrderBy\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$orderBy of method Extcode\\Contacts\\Domain\\Model\\Dto\\AddressSearch\:\:setOrderBy\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$pidList of static method Extcode\\Contacts\\Utility\\PageUtility\:\:extendPidListByChildren\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#1 \$uid of method TYPO3\\CMS\\Extbase\\Persistence\\Repository\<TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\>\:\:findByUid\(\) expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#2 \$addressSearchArgs of method Extcode\\Contacts\\Hooks\\AddressSearchAddressesLoadedHookInterface\:\:enrichAddresses\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#2 \$recursive of static method Extcode\\Contacts\\Utility\\PageUtility\:\:extendPidListByChildren\(\) expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#2 \$zip of method Extcode\\Contacts\\Domain\\Repository\\ZipRepository\:\:findByCountryAndZip\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Parameter \#3 \$zipMapFile of method Extcode\\Contacts\\Domain\\Repository\\ZipRepository\:\:findByCountryAndZip\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Unable to resolve the template type T in call to static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:makeInstance\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Variable \$country might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Variable \$zip might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: Classes/Controller/AddressController.php
+
+		-
+			message: '#^Cannot access offset ''id'' on array\|object\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Cannot access offset ''searchString'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Parameter \#1 \$queryResult of class TYPO3\\CMS\\Extbase\\Pagination\\QueryResultPaginator constructor expects TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface, array\|TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Parameter \#1 \$searchString of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setSearchString\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Parameter \#2 \$row of static method TYPO3\\CMS\\Backend\\Utility\\BackendUtility\:\:getRecordTitle\(\) expects array, array\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Parameter \#3 \$itemsPerPage of class TYPO3\\CMS\\Extbase\\Pagination\\QueryResultPaginator constructor expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/CompanyController.php
+
+		-
+			message: '#^Cannot access offset ''id'' on array\|object\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Cannot access offset ''searchString'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Parameter \#1 \$searchString of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setSearchString\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Parameter \#2 \$row of static method TYPO3\\CMS\\Backend\\Utility\\BackendUtility\:\:getRecordTitle\(\) expects array, array\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Parameter \#3 \$itemsPerPage of class TYPO3\\CMS\\Extbase\\Pagination\\QueryResultPaginator constructor expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/Backend/ContactController.php
+
+		-
+			message: '#^Binary operation "\." between ''tx_contacts_company_'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Call to an undefined method object\:\:addCacheTags\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Cannot access offset ''id'' on array\|object\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Cannot call method addCacheTags\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Cannot call method getId\(\) on TYPO3\\CMS\\Frontend\\Page\\PageInformation\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Cannot call method getUid\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 3
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Controller\\CompanyController\:\:addCacheTags\(\) has parameter \$companies with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$typoScriptFrontendController \\TYPO3\\CMS\\Frontend\\Controller\\TypoScriptFrontendController\)\: Unexpected token "\$typoScriptFrontendController", expected type at offset 9 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Parameter \#1 \$uids of method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:findByUids\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/CompanyController.php
+
+		-
+			message: '#^Binary operation "\." between ''tx_contacts_contact_'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Call to an undefined method object\:\:addCacheTags\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Cannot access offset ''id'' on array\|object\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Cannot call method addCacheTags\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Cannot call method getId\(\) on TYPO3\\CMS\\Frontend\\Page\\PageInformation\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Cannot call method getUid\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 3
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Controller\\ContactController\:\:addCacheTags\(\) has parameter \$contacts with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$typoScriptFrontendController TypoScriptFrontendController\)\: Unexpected token "\$typoScriptFrontendController", expected type at offset 9 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Parameter \#1 \$uids of method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:findByUids\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Controller/ContactController.php
+
+		-
+			message: '#^Binary operation "\*\=" between non\-falsy\-string and \-1 results in an error\.$#'
+			identifier: assignOp.invalid
+			count: 1
+			path: Classes/DataHandler/EvalFloat8.php
+
+		-
+			message: '#^Offset 0 might not exist on string\|null\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: Classes/DataHandler/EvalFloat8.php
+
+		-
+			message: '#^Parameter \#1 \$num of function number_format expects float, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/DataHandler/EvalFloat8.php
+
+		-
+			message: '#^Parameter \#1 \$str of function strtr expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/DataHandler/EvalFloat8.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\AbstractContact\:\:getTtContent\(\) return type with generic class TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage does not specify its types\: TEntity$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\AbstractContact\:\:setCategory\(\) has parameter \$category with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\AbstractContact\:\:setTtContent\(\) has parameter \$ttContent with generic class TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage but does not specify its types\: TEntity$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Domain\\Model\\AbstractContact\:\:\$category \(TYPO3\\CMS\\Extbase\\Domain\\Model\\Category\|null\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<TYPO3\\CMS\\Extbase\\Domain\\Model\\Category\> and null will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<Extcode\\Contacts\\Domain\\Model\\Address\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<Extcode\\Contacts\\Domain\\Model\\Phone\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<TYPO3\\CMS\\Extbase\\Domain\\Model\\Category\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: Classes/Domain/Model/AbstractContact.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\Address\:\:getTtContent\(\) return type with generic class TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage does not specify its types\: TEntity$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Model/Address.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\Address\:\:setCompany\(\) has parameter \$company with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Domain/Model/Address.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\Address\:\:setTtContent\(\) has parameter \$ttContent with generic class TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage but does not specify its types\: TEntity$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Model/Address.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Domain\\Model\\Address\:\:\$company \(Extcode\\Contacts\\Domain\\Model\\Company\|null\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Classes/Domain/Model/Address.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<Extcode\\Contacts\\Domain\\Model\\Company\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: Classes/Domain/Model/Company.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<Extcode\\Contacts\\Domain\\Model\\Contact\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 4
+			path: Classes/Domain/Model/Company.php
+
+		-
+			message: '#^Using nullsafe method call on non\-nullable type TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage\<Extcode\\Contacts\\Domain\\Model\\Company\>\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 2
+			path: Classes/Domain/Model/Contact.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:getAvailableCategories\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Model/Dto/Demand.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setAvailableCategories\(\) has parameter \$availableCategories with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Model/Dto/Demand.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:\$availableCategories type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Model/Dto/Demand.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''company'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 7
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''contact'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 7
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''country'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''uid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''uid_foreign'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot access offset ''uid_local'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 4
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\AddressRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:findAddressesByDistance\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:findByDistance\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:findCountries\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getCategories\(\) has parameter \$ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getCategories\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getCompanyData\(\) has parameter \$ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getCompanyData\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getContactData\(\) has parameter \$ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getContactData\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getImages\(\) has parameter \$ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getImages\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getPhones\(\) has parameter \$ids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getPhones\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Parameter \#1 \$keys of function array_combine expects array\<int\|string\>, list\<mixed\> given\.$#'
+			identifier: argument.type
+			count: 6
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Parameter \#3 \$lat2 of method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getDistance\(\) expects float, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Parameter \#4 \$lon2 of method Extcode\\Contacts\\Domain\\Repository\\AddressRepository\:\:getDistance\(\) expects float, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Possibly invalid array key type float\|int\|string\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 14
+			path: Classes/Domain/Repository/AddressRepository.php
+
+		-
+			message: '#^Call to an undefined method TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\:\:getParent\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Call to an undefined method TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\:\:getTitle\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Cannot access offset ''parent'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Cannot access offset ''subcategories'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Cannot access offset ''uid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Cannot call method getUid\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\CategoryRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) has parameter \$categoriesArray with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) has parameter \$parentCategory with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) should return array but returns list\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findAllAsArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findAllAsRecursiveTreeArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findFromDemand\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findSubcategoriesRecursiveAsArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:getSubcategoriesIds\(\) has parameter \$categoriesArray with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:getSubcategoriesIds\(\) has parameter \$parentCategory with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:getSubcategoriesIds\(\) has parameter \$subcategoriesArray with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Negated boolean expression is always false\.$#'
+			identifier: booleanNot.alwaysFalse
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Parameter \#2 \$parentCategory of method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Parameter \#2 \$parentCategory of method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:buildSubcategories\(\) expects array, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Parameter \#2 \$parentCategory of method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:getSubcategoriesIds\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Classes/Domain/Repository/CategoryRepository.php
+
+		-
+			message: '#^Cannot call method _getProperty\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Cannot call method getUid\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\CompanyRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:findByUids\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:findDemanded\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:findDemanded\(\) return type has no value type specified in iterable type array\|TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:findDemanded\(\) return type with generic interface TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:orderByField\(\) has parameter \$companies with generic interface TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:orderByField\(\) has parameter \$uids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\:\:orderByField\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 4
+			path: Classes/Domain/Repository/CompanyRepository.php
+
+		-
+			message: '#^Cannot call method _getProperty\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Cannot call method getUid\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\ContactRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:findByUids\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:findDemanded\(\) return type with generic interface TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:orderByField\(\) has parameter \$contacts with generic interface TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:orderByField\(\) has parameter \$uids with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ContactRepository\:\:orderByField\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Only iterables can be unpacked, list\<TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Qom\\ComparisonInterface\>\|TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Qom\\OrInterface given in argument \#1\.$#'
+			identifier: argument.unpackNonIterable
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$constraints of method TYPO3\\CMS\\Extbase\\Persistence\\QueryInterface\<TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\>\:\:logicalOr\(\) expects TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Qom\\ConstraintInterface, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 4
+			path: Classes/Domain/Repository/ContactRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\CountryRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/CountryRepository.php
+
+		-
+			message: '#^Class Extcode\\Contacts\\Domain\\Repository\\PhoneRepository extends generic class TYPO3\\CMS\\Extbase\\Persistence\\Repository but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: Classes/Domain/Repository/PhoneRepository.php
+
+		-
+			message: '#^Call to function is_array\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: Classes/Domain/Repository/ZipRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Domain\\Repository\\ZipRepository\:\:findByCountryAndZip\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Domain/Repository/ZipRepository.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Domain\\Repository\\ZipRepository\:\:\$zipMap has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: Classes/Domain/Repository/ZipRepository.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\AddressSearchAddressesLoadedHookInterface\:\:enrichAddresses\(\) has parameter \$addressSearchArgs with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/AddressSearchAddressesLoadedHookInterface.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\AddressSearchAddressesLoadedHookInterface\:\:enrichAddresses\(\) has parameter \$addresses with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/AddressSearchAddressesLoadedHookInterface.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\AddressSearchAddressesLoadedHookInterface\:\:enrichAddresses\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/AddressSearchAddressesLoadedHookInterface.php
+
+		-
+			message: '#^Binary operation "\." between ''tx_contacts_''\|''tx_contacts_company_''\|''tx_contacts_contact_'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: Classes/Hooks/DataHandler.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\DataHandler\:\:clearCachePostProc\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/DataHandler.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\DataHandler\:\:getCacheTagsToFlush\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/DataHandler.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\DataHandler\:\:getCacheTagsToFlush\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/DataHandler.php
+
+		-
+			message: '#^Parameter \#2 \$tag of method TYPO3\\CMS\\Core\\Cache\\CacheManager\:\:flushCachesInGroupByTag\(\) expects array\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Hooks/DataHandler.php
+
+		-
+			message: '#^Binary operation "\." between '' '' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Binary operation "\." between ''&key\='' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Binary operation "\." between ''\<input type\="button…'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Binary operation "\." between ''tx\-contacts\-address\-'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 3
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Binary operation "\.\=" between mixed and non\-falsy\-string results in an error\.$#'
+			identifier: assignOp.invalid
+			count: 2
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Call to an undefined method TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\:\:getIso2\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''city'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''country'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''latitude'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''latitudeField'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''longitude'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''longitudeField'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''street'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''street_number'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''uid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset ''zip'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot access offset string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 2
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:concatenateFieldsToAddress\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:getInputFields\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:init\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:render\(\) has parameter \$fObj with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:render\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:retrieveCountryCode\(\) should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:setLatLon\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:setLatLonFieldNames\(\) has parameter \$params with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Parameter \#1 \$googleMapsLibrary of method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:getJavaScript\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:\$addressId \(string\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:\$pluginSettings type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Property Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:\$tableName \(string\) does not accept mixed\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Classes/Hooks/GoogleMapHook.php
+
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset ''colPos'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset ''extKey'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset ''pid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset ''pluginName'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot access offset 1 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 2
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Expression on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.expr
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:getLanguageService\(\) should return TYPO3\\CMS\\Core\\Localization\\LanguageService but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:getPageId\(\) has parameter \$pid with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:getPageId\(\) should return int but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:reduceTemplateLayouts\(\) has parameter \$currentColPos with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:reduceTemplateLayouts\(\) has parameter \$templateLayouts with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:reduceTemplateLayouts\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\UserFunctions\\ItemsProcFunc\:\:user_templateLayout\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Offset ''pid'' might not exist on array\|null\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_ends_with expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Parameter \#1 \$input of method TYPO3\\CMS\\Core\\Localization\\LanguageService\:\:sL\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Parameter \#1 \$string of function substr expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Parameter \#2 \$string of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:intExplode\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Possibly invalid array key type mixed\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: Classes/UserFunctions/ItemsProcFunc.php
+
+		-
+			message: '#^Binary operation "\." between '','' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: Classes/Utility/PageUtility.php
+
+		-
+			message: '#^Parameter \#1 \$id of static method Extcode\\Contacts\\Utility\\PageUtility\:\:getTreeList\(\) expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/PageUtility.php
+
+		-
+			message: '#^Parameter \#4 \$permsClause of static method Extcode\\Contacts\\Utility\\PageUtility\:\:getTreeList\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/PageUtility.php
+
+		-
+			message: '#^Cannot access offset ''EXT'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Cannot access offset ''templateLayouts'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Cannot access offset ''templateLayouts\.'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Cannot access offset mixed on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Cannot access offset non\-falsy\-string on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getAvailableTemplateLayouts\(\) has parameter \$extKey with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getAvailableTemplateLayouts\(\) has parameter \$pageUid with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getAvailableTemplateLayouts\(\) has parameter \$pluginName with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getAvailableTemplateLayouts\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getTemplateLayoutsFromTsConfig\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_starts_with expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Parameter \#1 \$pageUid of method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getTemplateLayoutsFromTsConfig\(\) expects int, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Parameter \#1 \$string of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:camelCaseToLowerCaseUnderscored\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Parameter \#2 \$extKey of method Extcode\\Contacts\\Utility\\TemplateLayout\:\:getTemplateLayoutsFromTsConfig\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Parameter \#2 \$string of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:trimExplode\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/Utility/TemplateLayout.php
+
+		-
+			message: '#^Method Extcode\\Contacts\\ViewHelpers\\MetaTagViewHelper\:\:initializeArguments\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: Classes/ViewHelpers/MetaTagViewHelper.php
+
+		-
+			message: '#^Parameter \#1 \$property of method TYPO3\\CMS\\Core\\MetaTag\\MetaTagManagerInterface\:\:addProperty\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/ViewHelpers/MetaTagViewHelper.php
+
+		-
+			message: '#^Parameter \#1 \$property of method TYPO3\\CMS\\Core\\MetaTag\\MetaTagManagerRegistry\:\:getManagerForProperty\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/ViewHelpers/MetaTagViewHelper.php
+
+		-
+			message: '#^Parameter \#2 \$content of method TYPO3\\CMS\\Core\\MetaTag\\MetaTagManagerInterface\:\:addProperty\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Classes/ViewHelpers/MetaTagViewHelper.php
+
+		-
+			message: '#^Cannot access offset ''columns'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''config'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''tt_content'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''tx_contacts_domain_model_address'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''tx_contacts_domain_model_company'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''tx_contacts_domain_model_contact'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''type'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Binary operation "\." between '' AND sys_category…'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''categories'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''category'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''columns'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''config'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''foreign_table_where'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Cannot access offset ''tx_contacts_domain_model_company'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Binary operation "\." between '' AND sys_category…'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''categories'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''category'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''columns'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''config'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''foreign_table_where'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Cannot access offset ''tx_contacts_domain_model_contact'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_address.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_address.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_address.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_company.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_contact.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_country.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_country.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_country.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_phone.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_phone.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: Configuration/TCA/tx_contacts_domain_model_phone.php
+
+		-
+			message: '#^Cannot access offset ''title'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 30
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method createQuery\(\) on Extcode\\Contacts\\Domain\\Repository\\AddressRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method findAll\(\) on Extcode\\Contacts\\Domain\\Repository\\AddressRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method findByDistance\(\) on Extcode\\Contacts\\Domain\\Repository\\AddressRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 24
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method findByUid\(\) on Extcode\\Contacts\\Domain\\Repository\\AddressRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method getTitle\(\) on TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot call method setDefaultQuerySettings\(\) on Extcode\\Contacts\\Domain\\Repository\\AddressRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Functional\\Domain\\Repository\\AddressRepositoryTest\:\:\$addressRepository because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^You should use assertCount\(\$expectedCount, \$variable\) instead of assertSame\(\$expectedCount, \$variable\-\>count\(\)\)\.$#'
+			identifier: phpunit.assertCount
+			count: 2
+			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
+
+		-
+			message: '#^Call to an undefined method object\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Cannot call method createQuery\(\) on Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Cannot call method findDemanded\(\) on Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Cannot call method setDefaultQuerySettings\(\) on Extcode\\Contacts\\Domain\\Repository\\CompanyRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Cannot call method toArray\(\) on array\|TYPO3\\CMS\\Extbase\\Persistence\\QueryResultInterface\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Functional\\Domain\\Repository\\CompanyRepositoryTest\:\:\$companyRepository because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
+
+		-
+			message: '#^Call to an undefined method object\:\:getLastName\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Cannot call method createQuery\(\) on Extcode\\Contacts\\Domain\\Repository\\ContactRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Cannot call method findDemanded\(\) on Extcode\\Contacts\\Domain\\Repository\\ContactRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Cannot call method setDefaultQuerySettings\(\) on Extcode\\Contacts\\Domain\\Repository\\ContactRepository\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Functional\\Domain\\Repository\\ContactRepositoryTest\:\:\$contactRepository because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\AddressTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/AddressTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/AddressTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/AddressTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\CompanyTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/CompanyTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/CompanyTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/CompanyTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\ContactTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/ContactTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/ContactTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/ContactTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\CountryTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/CountryTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/CountryTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/CountryTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\Dto\\AddressSearchTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\Dto\\DemandTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
+
+		-
+			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\PhoneTest\:\:\$fixture because it might have hooks in a subclass\.$#'
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: Tests/Unit/Domain/Model/PhoneTest.php
+
+		-
+			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/PhoneTest.php
+
+		-
+			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
+			identifier: phpunit.callParent
+			count: 1
+			path: Tests/Unit/Domain/Model/PhoneTest.php
+
+		-
+			message: '#^Binary operation "\." between ''plugin\.tx_contacts…'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access an offset on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''EXT'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''Extcode\\\\Contacts\\\\DataHandler\\\\EvalFloat8'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''SC_OPTIONS'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''SYS'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''address'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''clearCachePostProc'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''company_teaser'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''contact_teaser'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''contacts'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''contacts_clearcache'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''fluid'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''formevals'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''googleMapsApiKey'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''googleMapsLibrary'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''namespaces'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''t3lib/class\.t3lib_tcemain\.php'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''tce'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
+
+		-
+			message: '#^Cannot access offset ''templateLayouts'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: ext_localconf.php
