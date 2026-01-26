@@ -14,9 +14,9 @@ return [
             'Default' => [
                 'charset' => 'utf8mb4',
                 'driver' => 'mysqli',
-                'tableoptions' => [
+                'defaultTableOptions' => [
                     'charset' => 'utf8mb4',
-                    'collate' => 'utf8mb4_unicode_ci',
+                    'collation' => 'utf8mb4_unicode_ci',
                 ],
             ],
         ],
