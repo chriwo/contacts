@@ -20,9 +20,11 @@ return RectorConfig::configure()
     ])
     ->withSkip([
         // Skip paths
-        __DIR__ . '/.build',
-        __DIR__ . '/.ddev',
-        __DIR__ . '/.github',
-        __DIR__ . '/config',
-        __DIR__ . '/var',
+        __DIR__ . '/Build/',
+        __DIR__ . '/Documentation/',
+        __DIR__ . '/.build/',
+        __DIR__ . '/.ddev/',
+        __DIR__ . '/.github/',
+        __DIR__ . '/.phpunit.cache/',
+        __DIR__ . '/var/',
     ]);

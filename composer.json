@@ -61,10 +61,10 @@
             ".build/bin/phpstan analyse -c Build/phpstan.neon"
         ],
         "test:rector:process": [
-            ".build/bin/rector process *"
+            ".build/bin/rector process -c rector.php --clear-cache --output-format=console"
         ],
         "test:rector:process:dry-run": [
-            ".build/bin/rector process * --dry-run"
+            ".build/bin/rector process -c rector.php --clear-cache --output-format=console --dry-run"
         ],
         "test:typoscript:lint": [
             ".build/bin/typoscript-lint -c Build/typoscriptlint.yaml Configuration"
