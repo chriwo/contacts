@@ -9,6 +9,7 @@ namespace Extcode\Contacts\Domain\Model;
  * LICENSE file that was distributed with this source code.
  */
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\Validate;
@@ -32,7 +33,8 @@ class Contact extends AbstractContact
      */
     protected ObjectStorage $companies;
 
-    protected ?FileReference $photo;
+    #[Cascade(['value' => 'remove'])]
+    protected ?FileReference $photo = null;
 
     public function __construct(
         string $salutation,
@@ -167,7 +169,7 @@ class Contact extends AbstractContact
         return $this->photo ?? null;
     }
 
-    public function setPhoto(FileReference $photo): void
+    public function setPhoto(?FileReference $photo): void
     {
         $this->photo = $photo;
     }
