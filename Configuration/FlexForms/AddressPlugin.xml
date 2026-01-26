@@ -13,8 +13,8 @@
                             <renderType>selectSingle</renderType>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <label></label>
-                                    <value></value>
+                                    <label/>
+                                    <value/>
                                 </numIndex>
                             </items>
                             <foreign_table>tx_contacts_domain_model_address</foreign_table>

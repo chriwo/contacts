@@ -31,8 +31,8 @@
                             <renderType>selectSingle</renderType>
                             <items>
                                 <numIndex index="0" type="array">
-                                    <label></label>
-                                    <value></value>
+                                    <label/>
+                                    <value/>
                                 </numIndex>
                                 <numIndex index="2">
                                     <label>LLL:EXT:contacts/Resources/Private/Language/locallang_be.xlf:tx_contacts.plugin.contacts.action.contact.list.orderBy.last_name</label>

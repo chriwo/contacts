@@ -6,7 +6,7 @@ bin/phpstan analyse --configuration=../phpstan.neon
 
 ## TYPO3 specific
 bin/rector process --config=../rector.php --clear-cache --output-format=console --dry-run
-bin/fractor process -v --config=../fractor.php --output-format=console --dry-run
+bin/fractor process --config=../fractor.php --clear-cache --output-format=console --dry-run
 
 ## Testing
 bin/phpunit -c ../phpunit.unit.xml

@@ -21,4 +21,6 @@ return FractorConfiguration::configure()
         __DIR__ . '/Build',
         __DIR__ . '/config',
         __DIR__ . '/var',
+        __DIR__ . '/phpunit.functional.xml',
+        __DIR__ . '/phpunit.unit.xml',
     ]);
