@@ -69,7 +69,7 @@ class ContactController extends ContactsActionController
         return $this->htmlResponse();
     }
 
-    public function showAction(Contact $contact = null): ResponseInterface
+    public function showAction(?Contact $contact = null): ResponseInterface
     {
         if (!$contact && (int)$this->settings['contact']) {
             $contact = $this->contactRepository->findByUid((int)$this->settings['contact']);

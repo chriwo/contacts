@@ -23,14 +23,14 @@ class CategoryRepository extends Repository
     {
         parent::__construct();
     }
-    public function findAllAsRecursiveTreeArray(Category $selectedCategory = null): array
+    public function findAllAsRecursiveTreeArray(?Category $selectedCategory = null): array
     {
         $categoriesArray = $this->findAllAsArray($selectedCategory);
         $categoriesTree = $this->buildSubcategories($categoriesArray, null);
         return $categoriesTree;
     }
 
-    public function findAllAsArray(Category $selectedCategory = null): array
+    public function findAllAsArray(?Category $selectedCategory = null): array
     {
         $localCategories = $this->findAll();
         $categories = [];

@@ -86,7 +86,7 @@ class AddressController extends ActionController
         return $this->htmlResponse();
     }
 
-    public function showAction(Address $address = null): ResponseInterface
+    public function showAction(?Address $address = null): ResponseInterface
     {
         if (!$address) {
             $address = $this->addressRepository->findByUid($this->settings['address']);
