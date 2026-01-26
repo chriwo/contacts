@@ -110,20 +110,20 @@ class Contact extends AbstractContact
         return $this->lastName;
     }
 
-    public function getFullName(string $seperator = ' '): string
+    public function getFullName(string $separator = ' '): string
     {
-        return implode($seperator, [$this->getFirstName(), $this->getLastName()]);
+        return implode($separator, [$this->getFirstName(), $this->getLastName()]);
     }
 
-    public function getTitleFullName(string $seperator = ' '): string
+    public function getTitleFullName(string $separator = ' '): string
     {
         $titleFullName = [];
         if ($this->getTitle()) {
             $titleFullName[] = $this->getTitle();
         }
-        $titleFullName[] = $this->getFullName($seperator);
+        $titleFullName[] = $this->getFullName($separator);
 
-        return implode($seperator, $titleFullName);
+        return implode($separator, $titleFullName);
     }
 
     public function setBirthday(\DateTime $birthday): void
