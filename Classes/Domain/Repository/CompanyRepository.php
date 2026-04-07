@@ -23,14 +23,14 @@ class CompanyRepository extends Repository
 
         $constraints = [];
 
-        if (!empty($demand->getSearchString())) {
+        if (!in_array($demand->getSearchString(), ['', '0'], true)) {
             $constraints[] = $query->like('name', '%' . $demand->getSearchString() . '%');
         }
 
-        if ((!empty($demand->getAvailableCategories()))) {
+        if (($demand->getAvailableCategories() !== [])) {
             $categoryConstraints = [];
 
-            if ($demand->getSelectedCategory()) {
+            if ($demand->getSelectedCategory() !== 0) {
                 $category = $demand->getSelectedCategory();
                 $categoryConstraints[] = $query->equals('category', $category);
                 $categoryConstraints[] = $query->equals('categories', $category);
@@ -53,7 +53,7 @@ class CompanyRepository extends Repository
             );
         }
 
-        if (!empty($demand->getOrderBy())) {
+        if (!in_array($demand->getOrderBy(), ['', '0'], true)) {
             $query->setOrderings(
                 [
                     $demand->getOrderBy() => QueryInterface::ORDER_ASCENDING,

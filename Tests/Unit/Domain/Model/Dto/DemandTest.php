@@ -20,11 +20,13 @@ class DemandTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->fixture = new Demand();
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

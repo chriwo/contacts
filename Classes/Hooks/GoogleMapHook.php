@@ -90,7 +90,7 @@ class GoogleMapHook
         }
 
         $country = $this->retrieveCountryCode((int)$params['row']['country'][0]);
-        if ($country) {
+        if ($country !== '' && $country !== '0') {
             $address[] = strtoupper($country);
         }
 
@@ -103,7 +103,7 @@ class GoogleMapHook
     {
         $country = $this->countryRepository->findOneBy(['uid' => $countryId]);
 
-        if ($country) {
+        if ($country instanceof \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface) {
             $countryCode = $country->getIso2();
 
             return $countryCode;

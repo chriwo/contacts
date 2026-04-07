@@ -1,37 +1,40 @@
 <?php
 
-defined('TYPO3') or die();
+defined('TYPO3') || die();
 
-$_LLL_core_general = 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf';
-$_LLL_db = 'LLL:EXT:contacts/Resources/Private/Language/locallang_db.xlf';
-$_LLL_tca = 'LLL:EXT:contacts/Resources/Private/Language/locallang_tca.xlf';
+return (function () {
+    $_LLL_core_general = 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf';
+    $_LLL_db = 'LLL:EXT:contacts/Resources/Private/Language/locallang_db.xlf';
+    $_LLL_tca = 'LLL:EXT:contacts/Resources/Private/Language/locallang_tca.xlf';
 
-return [
-    'ctrl' => [
-        'title' => $_LLL_db . ':tx_contacts_domain_model_country',
-        'label' => 'name',
-        'label_alt' => 'iso2',
-        'label_alt_force' => 1,
-        'tstamp' => 'tstamp',
-        'crdate' => 'crdate',
-
-        'versioningWS' => true,
-        'origUid' => 't3_origuid',
-        'languageField' => 'sys_language_uid',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'delete' => 'deleted',
-        'enablecolumns' => [
-            'disabled' => 'hidden',
-            'starttime' => 'starttime',
-            'endtime' => 'endtime',
+    return [
+        'ctrl' => [
+            'title' => $_LLL_db . ':tx_contacts_domain_model_country',
+            'label' => 'name',
+            'label_alt' => 'iso2',
+            'label_alt_force' => 1,
+            'tstamp' => 'tstamp',
+            'crdate' => 'crdate',
+            'editlock' => 'editlock',
+            'versioningWS' => true,
+            'origUid' => 't3_origuid',
+            'languageField' => 'sys_language_uid',
+            'transOrigPointerField' => 'l10n_parent',
+            'transOrigDiffSourceField' => 'l10n_diffsource',
+            'delete' => 'deleted',
+            'enablecolumns' => [
+                'disabled' => 'hidden',
+                'starttime' => 'starttime',
+                'endtime' => 'endtime',
+            ],
+            'searchFields' => 'iso,name',
+            'typeicon_classes' => [
+                'default' => 'contacts-country',
+            ],
         ],
-        'searchFields' => 'iso,name',
-        'iconfile' => 'EXT:contacts/Resources/Public/Icons/tx_contacts_domain_model_country.svg',
-    ],
-    'types' => [
-        '1' => [
-            'showitem' => '
+        'types' => [
+            '1' => [
+                'showitem' => '
                 iso2, iso3,
                 name,
                 tld,
@@ -40,128 +43,124 @@ return [
                     --palette--;' . $_LLL_tca . ':palettes.visibility;hiddenonly,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,
             ',
-        ],
-    ],
-    'palettes' => [
-        'hiddenonly' => [
-            'showitem' => 'hidden;' . $_LLL_db . ':tx_contacts_domain_model_country',
-        ],
-        'access' => [
-            'showitem' => 'starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel, endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
-        ],
-    ],
-    'columns' => [
-        'sys_language_uid' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config' => ['type' => 'language'],
-        ],
-        'l10n_parent' => [
-            'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    ['label' => '', 'value' => 0],
-                ],
-                'foreign_table' => 'tx_contacts_domain_model_company',
-                'foreign_table_where' => 'AND tx_contacts_domain_model_company.pid=###CURRENT_PID### AND tx_contacts_domain_model_company.sys_language_uid IN (-1,0)',
             ],
         ],
-        'l10n_diffsource' => [
-            'config' => [
-                'type' => 'passthrough',
+        'palettes' => [
+            'hiddenonly' => [
+                'showitem' => 'hidden;' . $_LLL_db . ':tx_contacts_domain_model_country',
+            ],
+            'access' => [
+                'showitem' => '
+                    starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
+                    endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
+                    --linebreak--,editlock',
             ],
         ],
-        't3ver_label' => [
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'max' => 255,
+        'columns' => [
+            'sys_language_uid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
+                'config' => ['type' => 'language'],
             ],
-        ],
-        'hidden' => [
-            'exclude' => 1,
-            'label' => $_LLL_core_general . ':LGL.hidden',
-            'config' => [
-                'type' => 'check',
-                'renderType' => 'checkboxToggle',
-            ],
-        ],
-        'starttime' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-            'config' => [
-                'type' => 'datetime',
-                'size' => 13,
-                'checkbox' => 0,
-                'default' => 0,
-                'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
+            'l10n_parent' => [
+                'displayCond' => 'FIELD:sys_language_uid:>:0',
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        ['label' => '', 'value' => 0],
+                    ],
+                    'foreign_table' => 'tx_contacts_domain_model_company',
+                    'foreign_table_where' => 'AND tx_contacts_domain_model_company.pid=###CURRENT_PID### AND tx_contacts_domain_model_company.sys_language_uid IN (-1,0)',
                 ],
             ],
-        ],
-        'endtime' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-            'config' => [
-                'type' => 'datetime',
-                'size' => 13,
-                'checkbox' => 0,
-                'default' => 0,
-                'range' => [
-                    'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
+            'l10n_diffsource' => [
+                'config' => [
+                    'type' => 'passthrough',
+                ],
+            ],
+            'hidden' => [
+                'exclude' => true,
+                'label' => $_LLL_core_general . ':LGL.hidden',
+                'config' => [
+                    'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                ],
+            ],
+            'starttime' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+                'config' => [
+                    'type' => 'datetime',
+                    'size' => 13,
+                    'checkbox' => 0,
+                    'default' => 0,
+                    'range' => [
+                        'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
+                    ],
+                ],
+            ],
+            'endtime' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+                'config' => [
+                    'type' => 'datetime',
+                    'size' => 13,
+                    'checkbox' => 0,
+                    'default' => 0,
+                    'range' => [
+                        'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
+                    ],
+                ],
+            ],
+            'iso2' => [
+                'exclude' => 0,
+                'label' => $_LLL_db . ':tx_contacts_domain_model_country.iso2',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'eval' => 'trim',
+                    'required' => true,
+                ],
+            ],
+            'iso3' => [
+                'exclude' => 0,
+                'label' => $_LLL_db . ':tx_contacts_domain_model_country.iso3',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'eval' => 'trim',
+                ],
+            ],
+            'name' => [
+                'exclude' => 0,
+                'label' => $_LLL_db . ':tx_contacts_domain_model_country.name',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'eval' => 'trim',
+                    'required' => true,
+                ],
+            ],
+            'tld' => [
+                'exclude' => 0,
+                'label' => $_LLL_db . ':tx_contacts_domain_model_country.tld',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'eval' => 'trim',
+                ],
+            ],
+            'phone_country_code' => [
+                'exclude' => 0,
+                'label' => $_LLL_db . ':tx_contacts_domain_model_country.phone_country_code',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'eval' => 'trim',
                 ],
             ],
         ],
-        'iso2' => [
-            'exclude' => 0,
-            'label' => $_LLL_db . ':tx_contacts_domain_model_country.iso2',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-                'required' => true,
-            ],
-        ],
-        'iso3' => [
-            'exclude' => 0,
-            'label' => $_LLL_db . ':tx_contacts_domain_model_country.iso3',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-            ],
-        ],
-        'name' => [
-            'exclude' => 0,
-            'label' => $_LLL_db . ':tx_contacts_domain_model_country.name',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-                'required' => true,
-            ],
-        ],
-        'tld' => [
-            'exclude' => 0,
-            'label' => $_LLL_db . ':tx_contacts_domain_model_country.tld',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-            ],
-        ],
-        'phone_country_code' => [
-            'exclude' => 0,
-            'label' => $_LLL_db . ':tx_contacts_domain_model_country.phone_country_code',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-            ],
-        ],
-    ],
-];
+    ];
+})();

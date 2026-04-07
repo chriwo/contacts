@@ -77,7 +77,7 @@ class AddressRepository extends Repository
 
     protected function getCompanyData(array $ids): array
     {
-        if (empty($ids)) {
+        if ($ids === []) {
             return [];
         }
 
@@ -118,7 +118,7 @@ class AddressRepository extends Repository
 
     protected function getContactData(array $ids): array
     {
-        if (empty($ids)) {
+        if ($ids === []) {
             return [];
         }
 
@@ -159,7 +159,7 @@ class AddressRepository extends Repository
 
     protected function getPhones(string $type, array $ids): array
     {
-        if (empty($ids)) {
+        if ($ids === []) {
             return [];
         }
 
@@ -240,14 +240,14 @@ class AddressRepository extends Repository
                 )
             );
 
-        if (!empty($addressSearch->getPids())) {
+        if (!in_array($addressSearch->getPids(), ['', '0'], true)) {
             $queryBuilder
                 ->andWhere(
                     $queryBuilder->expr()->in('pid', explode(',', $addressSearch->getPids()))
                 );
         }
 
-        if (!empty($addressSearch->getSearchString())) {
+        if (!in_array($addressSearch->getSearchString(), ['', '0'], true)) {
             $queryBuilder
                 ->andWhere(
                     $queryBuilder->expr()->like(
@@ -257,7 +257,7 @@ class AddressRepository extends Repository
                 );
         }
 
-        if (!empty($addressSearch->getOrderBy())) {
+        if (!in_array($addressSearch->getOrderBy(), ['', '0'], true)) {
             if ($addressSearch->getOrderBy() !== 'distance') {
                 $queryBuilder->orderBy($addressSearch->getOrderBy());
             }

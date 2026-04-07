@@ -16,16 +16,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
 
 class Contact extends AbstractContact
 {
-    protected string $salutation = '';
-
-    protected string $title = '';
-
-    #[Validate(['validator' => 'NotEmpty'])]
-    protected string $firstName;
-
-    #[Validate(['validator' => 'NotEmpty'])]
-    protected string $lastName;
-
     protected ?\DateTime $birthday = null;
 
     /**
@@ -37,20 +27,19 @@ class Contact extends AbstractContact
     protected ?FileReference $photo = null;
 
     public function __construct(
-        string $salutation,
-        string $title,
-        string $firstName,
-        string $lastName,
+        protected string $salutation,
+        protected string $title,
+        #[Validate(['validator' => 'NotEmpty'])]
+        protected string $firstName,
+        #[Validate(['validator' => 'NotEmpty'])]
+        protected string $lastName,
     ) {
         parent::__construct();
-        $this->salutation = $salutation;
-        $this->title = $title;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
 
         $this->initializeObject();
     }
 
+    #[\Override]
     public function initializeObject(): void
     {
         $this->companies = new ObjectStorage();
@@ -80,7 +69,7 @@ class Contact extends AbstractContact
 
     public function setFirstName(string $firstName): void
     {
-        if (strlen($firstName) == 0) {
+        if ($firstName === '') {
             throw new \InvalidArgumentException(
                 'The first name can not be blank.',
                 1373525114
@@ -97,7 +86,7 @@ class Contact extends AbstractContact
 
     public function setLastName(string $lastName): void
     {
-        if (strlen($lastName) == 0) {
+        if ($lastName === '') {
             throw new \InvalidArgumentException(
                 'The last name can not be blank.',
                 1373525586
@@ -120,7 +109,7 @@ class Contact extends AbstractContact
     public function getTitleFullName(string $separator = ' '): string
     {
         $titleFullName = [];
-        if ($this->getTitle()) {
+        if ($this->getTitle() !== '' && $this->getTitle() !== '0') {
             $titleFullName[] = $this->getTitle();
         }
         $titleFullName[] = $this->getFullName($separator);

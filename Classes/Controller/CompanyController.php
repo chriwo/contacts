@@ -43,7 +43,7 @@ class CompanyController extends ContactsActionController
     public function listAction(): ResponseInterface
     {
         $demand = $this->createDemandObjectFromSettings($this->settings);
-        $demand->setActionAndClass(__METHOD__, __CLASS__);
+        $demand->setActionAndClass(__METHOD__, self::class);
 
         $companies = $this->companyRepository->findDemanded($demand);
 

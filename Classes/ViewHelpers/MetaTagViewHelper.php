@@ -52,6 +52,7 @@ class MetaTagViewHelper extends AbstractViewHelper
     /**
      * Renders a meta tag
      */
+    #[\Override]
     public function render()
     {
         $metaTagManager = $this->metaTagManagerRegistry

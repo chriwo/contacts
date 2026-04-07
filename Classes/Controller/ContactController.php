@@ -42,7 +42,7 @@ class ContactController extends ContactsActionController
     public function listAction(): ResponseInterface
     {
         $demand = $this->createDemandObjectFromSettings($this->settings);
-        $demand->setActionAndClass(__METHOD__, __CLASS__);
+        $demand->setActionAndClass(__METHOD__, self::class);
 
         $contacts = $this->contactRepository->findDemanded($demand);
 

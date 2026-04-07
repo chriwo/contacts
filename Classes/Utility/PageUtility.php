@@ -33,7 +33,7 @@ class PageUtility
         foreach ($storagePids as $startPid) {
             if ($startPid >= 0) {
                 $pids = self::getTreeList($startPid, $recursive, 0, 1);
-                if (strlen($pids) > 0) {
+                if ($pids !== '') {
                     $recursiveStoragePids .= ',' . $pids;
                 }
             }
@@ -49,11 +49,7 @@ class PageUtility
         if ($id < 0) {
             $id = abs($id);
         }
-        if ($begin === 0) {
-            $theList = (string)$id;
-        } else {
-            $theList = '';
-        }
+        $theList = $begin === 0 ? (string)$id : '';
         if ($id && $depth > 0) {
             $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
             $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
@@ -74,7 +70,7 @@ class PageUtility
                 }
                 if ($depth > 1) {
                     $theSubList = self::getTreeList($row['uid'], $depth - 1, $begin - 1, $permsClause);
-                    if (!empty($theList) && !empty($theSubList) && ($theSubList[0] !== ',')) {
+                    if ($theList !== '' && $theList !== '0' && ($theSubList !== '' && $theSubList !== '0') && ($theSubList[0] !== ',')) {
                         $theList .= ',';
                     }
                     $theList .= $theSubList;

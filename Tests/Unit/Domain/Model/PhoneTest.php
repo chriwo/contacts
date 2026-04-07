@@ -20,11 +20,13 @@ class PhoneTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->fixture = new Phone();
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

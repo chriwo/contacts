@@ -20,11 +20,13 @@ class AddressSearchTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->fixture = new AddressSearch();
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

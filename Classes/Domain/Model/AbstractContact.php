@@ -44,7 +44,7 @@ abstract class AbstractContact extends AbstractEntity
     #[Lazy]
     protected ObjectStorage $ttContent;
 
-    protected ?Category $category;
+    protected ?Category $category = null;
 
     /**
      * @var ObjectStorage<Category>
@@ -214,7 +214,7 @@ abstract class AbstractContact extends AbstractEntity
     public function getFirstCategory(): ?Category
     {
         $categories = $this->getCategories();
-        if ($categories !== null) {
+        if ($categories instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
             $categories->rewind();
             return $categories->current();
         }

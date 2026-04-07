@@ -15,9 +15,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
 
 class Company extends AbstractContact
 {
-    #[Validate(['validator' => 'NotEmpty'])]
-    protected string $name;
-
     protected string $legalName = '';
 
     protected string $legalForm = '';
@@ -45,14 +42,15 @@ class Company extends AbstractContact
      */
     protected ObjectStorage $companies;
 
-    protected ?FileReference $logo;
+    protected ?FileReference $logo = null;
 
-    public function __construct(string $name)
+    public function __construct(#[Validate(['validator' => 'NotEmpty'])]
+    protected string $name)
     {
         parent::__construct();
-        $this->name = $name;
     }
 
+    #[\Override]
     public function initializeObject(): void
     {
         $this->directors = new ObjectStorage();
@@ -67,7 +65,7 @@ class Company extends AbstractContact
 
     public function setName(string $name): void
     {
-        if (strlen($name) == 0) {
+        if ($name === '') {
             throw new \InvalidArgumentException(
                 'The name can not be blank.',
                 1373527548

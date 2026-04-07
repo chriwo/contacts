@@ -40,6 +40,6 @@
         ]
     );
 
-    $siteName = empty(getenv('TYPO3_SITENAME')) ? 'New TYPO3 Website' : getenv('TYPO3_SITENAME');
+    $siteName = in_array(getenv('TYPO3_SITENAME'), ['', '0'], true) || getenv('TYPO3_SITENAME') === [] || getenv('TYPO3_SITENAME') === false ? 'New TYPO3 Website' : getenv('TYPO3_SITENAME');
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] = $siteName . ' [' . getenv('TYPO3_CONTEXT') . ']';
 })();

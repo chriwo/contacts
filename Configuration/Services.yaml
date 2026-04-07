@@ -7,3 +7,6 @@ services:
   Extcode\Contacts\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  Extcode\Contacts\Hooks\DataHandler:
+    public: true

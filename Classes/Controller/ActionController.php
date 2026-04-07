@@ -46,7 +46,7 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
             if ($arguments['filter']['category'] === '0') {
                 $demand->setSelectedCategory(0);
-            } elseif ((int)$arguments['filter']['category']) {
+            } elseif ((int)$arguments['filter']['category'] !== 0) {
                 $selectedCategory = (int)$arguments['filter']['category'];
                 if (in_array($selectedCategory, $demand->getAvailableCategories())) {
                     $demand->setSelectedCategory($selectedCategory);
@@ -102,7 +102,7 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
             $category = $this->pageRepository->getLanguageOverlay('sys_category', $category);
 
             // In case of "strict" language mode
-            if (empty($category)) {
+            if ($category === null || $category === []) {
                 continue;
             }
 

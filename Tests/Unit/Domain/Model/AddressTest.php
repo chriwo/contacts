@@ -22,11 +22,13 @@ class AddressTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->fixture = new Address();
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

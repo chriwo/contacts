@@ -29,17 +29,14 @@ class TemplateLayout implements SingletonInterface
             ) {
                 $templateLayouts = $GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'][$pluginName];
             }
-        } else {
-            if (isset($GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'])
-                && is_array($GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'])
-            ) {
-                $templateLayouts = $GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'];
-            }
+        } elseif (isset($GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'])
+            && is_array($GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'])) {
+            $templateLayouts = $GLOBALS['TYPO3_CONF_VARS']['EXT'][$extKey]['templateLayouts'];
         }
 
         // Add TsConfig values
         foreach ($this->getTemplateLayoutsFromTsConfig($pageUid, $extKey, $pluginName) as $templateKey => $title) {
-            if (str_starts_with($title, '--div--')) {
+            if (str_starts_with((string) $title, '--div--')) {
                 $optGroupParts = GeneralUtility::trimExplode(',', $title, true, 2);
                 $title = $optGroupParts[1];
                 $templateKey = $optGroupParts[0];
@@ -59,7 +56,7 @@ class TemplateLayout implements SingletonInterface
         $pagesTsConfig = BackendUtility::getPagesTSconfig($pageUid);
         $extKey = 'tx_' . preg_replace('/_/', '', $extKey) . '.';
 
-        if (!empty($pluginName)) {
+        if ($pluginName !== '' && $pluginName !== '0') {
             $pluginName .= '.';
             if (isset($pagesTsConfig[$extKey]['templateLayouts.']) &&
                 isset($pagesTsConfig[$extKey]['templateLayouts.'][$pluginName]) &&
@@ -67,12 +64,9 @@ class TemplateLayout implements SingletonInterface
             ) {
                 $templateLayouts = $pagesTsConfig[$extKey]['templateLayouts.'][$pluginName];
             }
-        } else {
-            if (isset($pagesTsConfig[$extKey]['templateLayouts.']) &&
-                is_array($pagesTsConfig[$extKey]['templateLayouts.'])
-            ) {
-                $templateLayouts = $pagesTsConfig[$extKey]['templateLayouts.'];
-            }
+        } elseif (isset($pagesTsConfig[$extKey]['templateLayouts.']) &&
+            is_array($pagesTsConfig[$extKey]['templateLayouts.'])) {
+            $templateLayouts = $pagesTsConfig[$extKey]['templateLayouts.'];
         }
         return $templateLayouts;
     }

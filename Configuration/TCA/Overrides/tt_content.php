@@ -4,10 +4,10 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
-defined('TYPO3') or die();
+defined('TYPO3') || die();
 
 call_user_func(function () {
-    $_LLL_db = 'LLL:' . 'EXT:contacts/Resources/Private/Language/locallang_db.xlf';
+    $_LLL_db = 'LLL:EXT:contacts/Resources/Private/Language/locallang_db.xlf';
 
     $pluginNames = [
         'Address',

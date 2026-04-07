@@ -23,6 +23,7 @@ class CompanyTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->name = 'Name';
@@ -30,6 +31,7 @@ class CompanyTest extends UnitTestCase
         $this->fixture = new Company($this->name);
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

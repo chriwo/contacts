@@ -21,11 +21,13 @@ class CountryTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->fixture = new Country();
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);

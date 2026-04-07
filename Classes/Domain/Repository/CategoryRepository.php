@@ -42,7 +42,7 @@ class CategoryRepository extends Repository
                 'parent' =>
                     ($localCategory->getParent() ? $localCategory->getParent()->getUid() : null),
                 'subcategories' => null,
-                'isSelected' => ($selectedCategory == $localCategory ? true : false),
+                'isSelected' => ($selectedCategory == $localCategory),
             ];
             $categories[] = $newCategory;
         }
@@ -102,7 +102,7 @@ class CategoryRepository extends Repository
     {
         $categories = [];
 
-        if (empty($demand->getAvailableCategories())) {
+        if ($demand->getAvailableCategories() === []) {
             return $categories;
         }
 

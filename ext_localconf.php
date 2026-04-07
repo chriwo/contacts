@@ -9,7 +9,7 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
-defined('TYPO3') or die();
+defined('TYPO3') || die();
 
 $_LLL_be = 'LLL:EXT:contacts/Resources/Private/Language/locallang_be.xlf';
 

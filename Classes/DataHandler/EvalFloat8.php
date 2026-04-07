@@ -24,20 +24,24 @@ class EvalFloat8
      */
     public function evaluateFieldValue(string $value, string $is_in, bool &$set): string
     {
-        $value = preg_replace('/[^0-9,\\.-]/', '', $value);
-        $negative = $value[0] === '-';
+        if ($value === '' || $value === '0') {
+            $value = '0';
+        }
+
+        $value = preg_replace('/[^0-9,.-]/', '', $value);
+        $negative = is_array($value) && $value[0] === '-';
         $value = strtr($value, [',' => '.', '-' => '']);
         if (!str_contains($value, '.')) {
             $value .= '.0';
         }
+
         $valueArray = explode('.', $value);
         $dec = array_pop($valueArray);
         $value = implode('', $valueArray) . '.' . $dec;
         if ($negative) {
             $value *= -1;
         }
-        $value = number_format($value, 8, '.', '');
 
-        return $value;
+        return  number_format($value, 8, '.', '');
     }
 }

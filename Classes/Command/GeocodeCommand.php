@@ -43,7 +43,7 @@ class GeocodeCommand extends Command
     {
         $output->writeln('');
 
-        if (empty($this->googleMapsApiKey)) {
+        if ($this->googleMapsApiKey === '' || $this->googleMapsApiKey === '0') {
             $output->writeln('ApiKey is missing!');
             $output->writeln('');
             return Command::FAILURE;
@@ -130,8 +130,8 @@ class GeocodeCommand extends Command
         $resp = json_decode($resp_json, true);
 
         if ($resp['status'] === 'OK') {
-            $lat = isset($resp['results'][0]['geometry']['location']['lat']) ? $resp['results'][0]['geometry']['location']['lat'] : '';
-            $lng = isset($resp['results'][0]['geometry']['location']['lng']) ? $resp['results'][0]['geometry']['location']['lng'] : '';
+            $lat = $resp['results'][0]['geometry']['location']['lat'] ?? '';
+            $lng = $resp['results'][0]['geometry']['location']['lng'] ?? '';
 
             if ($lat && $lng) {
                 return [$lat, $lng];

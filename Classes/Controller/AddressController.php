@@ -88,7 +88,7 @@ class AddressController extends ActionController
 
     public function showAction(?Address $address = null): ResponseInterface
     {
-        if (!$address) {
+        if (!$address instanceof \Extcode\Contacts\Domain\Model\Address) {
             $address = $this->addressRepository->findByUid($this->settings['address']);
         }
 

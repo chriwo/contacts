@@ -33,7 +33,7 @@ class Address extends AbstractEntity
 
     protected string $region = '';
 
-    protected ?Country $country;
+    protected ?Country $country = null;
 
     protected string $postBox = '';
 
@@ -47,9 +47,9 @@ class Address extends AbstractEntity
     #[Lazy]
     protected ObjectStorage $ttContent;
 
-    protected ?Contact $contact;
+    protected ?Contact $contact = null;
 
-    protected ?Company $company;
+    protected ?Company $company = null;
 
     public function __construct()
     {

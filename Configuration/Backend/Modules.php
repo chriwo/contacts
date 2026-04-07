@@ -1,6 +1,5 @@
 <?php
 
-use Extcode\Contacts\Controller\Backend\CompanyController;
 use Extcode\Contacts\Controller\Backend\ContactController;
 
 return [
@@ -14,11 +13,11 @@ return [
         'iconIdentifier' => 'module-contacts',
         'extensionName' => 'Contacts',
         'controllerActions' => [
-            CompanyController::class => [
+            /**CompanyController::class => [
                 'list', 'show',
-            ],
+            ],*/
             ContactController::class => [
-                'list', 'show',
+                'list',// 'show',
             ],
         ],
     ],

@@ -29,6 +29,7 @@ class ContactTest extends UnitTestCase
      */
     protected $fixture;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->salutation = 'Salutation';
@@ -43,6 +44,7 @@ class ContactTest extends UnitTestCase
         );
     }
 
+    #[\Override]
     public function tearDown(): void
     {
         unset($this->fixture);
