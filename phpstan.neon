@@ -4,13 +4,6 @@ parameters:
   level: max
   reportUnmatchedIgnoredErrors: true
   paths:
-    - ./
-  excludePaths:
-    - .build
-    - .ddev
-    - .github
-    - .phpunit.cache (?)
-    - config (?)
-    - var (?)
-    - Resources
-    - Documentation
+    - ./Classes
+    - ./Configuration
+    - ./ext_localconf.php
