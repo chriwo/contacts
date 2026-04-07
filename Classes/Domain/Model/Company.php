@@ -45,7 +45,7 @@ class Company extends AbstractContact
     protected ?FileReference $logo = null;
 
     public function __construct(#[Validate(['validator' => 'NotEmpty'])]
-    protected string $name)
+        protected string $name)
     {
         parent::__construct();
     }

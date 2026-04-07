@@ -17,7 +17,7 @@ return [
                 'list', 'show',
             ],*/
             ContactController::class => [
-                'list',// 'show',
+                'list', // 'show',
             ],
         ],
     ],

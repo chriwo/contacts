@@ -214,7 +214,7 @@ abstract class AbstractContact extends AbstractEntity
     public function getFirstCategory(): ?Category
     {
         $categories = $this->getCategories();
-        if ($categories instanceof \TYPO3\CMS\Extbase\Persistence\ObjectStorage) {
+        if ($categories instanceof ObjectStorage) {
             $categories->rewind();
             return $categories->current();
         }

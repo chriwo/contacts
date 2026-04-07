@@ -1,5 +1,7 @@
 <?php
 
+use Extcode\Contacts\DataHandler\EvalFloat8;
+
 defined('TYPO3') || die();
 
 return (function () {
@@ -277,7 +279,7 @@ return (function () {
                 'config' => [
                     'type' => 'input',
                     'size' => 30,
-                    'eval' => 'trim,' . Extcode\Contacts\DataHandler\EvalFloat8::class,
+                    'eval' => 'trim,' . EvalFloat8::class,
                 ],
             ],
             'lon' => [
@@ -286,7 +288,7 @@ return (function () {
                 'config' => [
                     'type' => 'input',
                     'size' => 30,
-                    'eval' => 'trim,' . Extcode\Contacts\DataHandler\EvalFloat8::class,
+                    'eval' => 'trim,' . EvalFloat8::class,
                 ],
             ],
             'post_box' => [

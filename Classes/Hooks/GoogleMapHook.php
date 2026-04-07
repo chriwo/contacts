@@ -14,6 +14,7 @@ use TYPO3\CMS\Core\Information\Typo3Version;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
+use TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface;
 
 class GoogleMapHook
 {
@@ -103,7 +104,7 @@ class GoogleMapHook
     {
         $country = $this->countryRepository->findOneBy(['uid' => $countryId]);
 
-        if ($country instanceof \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface) {
+        if ($country instanceof DomainObjectInterface) {
             $countryCode = $country->getIso2();
 
             return $countryCode;

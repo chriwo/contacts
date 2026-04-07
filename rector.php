@@ -6,6 +6,9 @@ use Rector\Config\RectorConfig;
 use Rector\PHPUnit\Set\PHPUnitSetList;
 use Ssch\TYPO3Rector\Set\Typo3LevelSetList;
 use Ssch\TYPO3Rector\Set\Typo3SetList;
+use Rector\Set\ValueObject\LevelSetList;
+use Rector\Set\ValueObject\SetList;
+use Rector\ValueObject\PhpVersion;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -20,11 +23,11 @@ return RectorConfig::configure()
         __DIR__ . '/fractor.php',
         __DIR__ . '/rector.php',
     ])
-    ->withPhpVersion(\Rector\ValueObject\PhpVersion::PHP_84)
+    ->withPhpVersion(PhpVersion::PHP_84)
     ->withImportNames(false, true, false, true)
     ->withSets([
-        \Rector\Set\ValueObject\SetList::CODE_QUALITY,
-        \Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_84,
+        SetList::CODE_QUALITY,
+        LevelSetList::UP_TO_PHP_84,
 
         Typo3SetList::CODE_QUALITY,
         Typo3SetList::GENERAL,
