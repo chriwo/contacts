@@ -7,7 +7,6 @@ CREATE TABLE tx_contacts_domain_model_contact (
     teaser text NOT NULL,
     description text NOT NULL,
     meta_description text NOT NULL,
-    categories int(11) unsigned DEFAULT '0' NOT NULL,
 );
 
 #
@@ -18,7 +17,6 @@ CREATE TABLE tx_contacts_domain_model_company (
     teaser text NOT NULL,
     description text NOT NULL,
     meta_description text NOT NULL,
-    categories int(11) unsigned DEFAULT '0' NOT NULL,
 );
 
 #
