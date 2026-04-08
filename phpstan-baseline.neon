@@ -1135,12 +1135,6 @@ parameters:
 			path: Classes/Hooks/GoogleMapHook.php
 
 		-
-			message: '#^Binary operation "\." between ''&key\='' and mixed results in an error\.$#'
-			identifier: binaryOp.invalid
-			count: 1
-			path: Classes/Hooks/GoogleMapHook.php
-
-		-
 			message: '#^Binary operation "\." between ''\<input type\="button…'' and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 1
@@ -1161,7 +1155,7 @@ parameters:
 		-
 			message: '#^Binary operation "\.\=" between mixed and non\-falsy\-string results in an error\.$#'
 			identifier: assignOp.invalid
-			count: 2
+			count: 1
 			path: Classes/Hooks/GoogleMapHook.php
 
 		-
@@ -1299,12 +1293,6 @@ parameters:
 		-
 			message: '#^Method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:setLatLonFieldNames\(\) has parameter \$params with no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
-			count: 1
-			path: Classes/Hooks/GoogleMapHook.php
-
-		-
-			message: '#^Parameter \#1 \$googleMapsLibrary of method Extcode\\Contacts\\Hooks\\GoogleMapHook\:\:getJavaScript\(\) expects string, mixed given\.$#'
-			identifier: argument.type
 			count: 1
 			path: Classes/Hooks/GoogleMapHook.php
 
@@ -1633,7 +1621,7 @@ parameters:
 			path: Configuration/TCA/Overrides/tt_content.php
 
 		-
-			message: '#^Binary operation "\." between '' AND sys_category…'' and mixed results in an error\.$#'
+			message: '#^Binary operation "\." between string and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 2
 			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
@@ -1675,13 +1663,7 @@ parameters:
 			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
 
 		-
-			message: '#^Strict comparison using \!\=\= between '' AND sys_category…'' and ''0'' will always evaluate to true\.$#'
-			identifier: notIdentical.alwaysTrue
-			count: 1
-			path: Configuration/TCA/Overrides/tx_contacts_domain_model_company.php
-
-		-
-			message: '#^Binary operation "\." between '' AND sys_category…'' and mixed results in an error\.$#'
+			message: '#^Binary operation "\." between string and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 2
 			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
@@ -1720,12 +1702,6 @@ parameters:
 			message: '#^Cannot access offset ''tx_contacts_domain_model_contact'' on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 2
-			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
-
-		-
-			message: '#^Strict comparison using \!\=\= between '' AND sys_category…'' and ''0'' will always evaluate to true\.$#'
-			identifier: notIdentical.alwaysTrue
-			count: 1
 			path: Configuration/TCA/Overrides/tx_contacts_domain_model_contact.php
 
 		-

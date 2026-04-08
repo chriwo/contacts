@@ -1,17 +1,14 @@
 <?php
 
-use Extcode\Contacts\Hooks\GoogleMapHook;
-
 defined('TYPO3') || die();
 
-use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use Extcode\Contacts\Domain\Model\Dto\ExtensionConfiguration;
+use Extcode\Contacts\Hooks\GoogleMapHook;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-$googleMapsLibrary = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('contacts', 'googleMapsLibrary');
-$googleMapsApiKey = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('contacts', 'googleMapsApiKey');
-
-if (!empty($googleMapsLibrary) && !empty($googleMapsApiKey)) {
+$extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+if ($extensionConfiguration->isMapsUsageEnabled()) {
     $googleMapsField = [
         'coords' => [
             'exclude' => 1,

@@ -2,9 +2,6 @@
 
 namespace Extcode\Contacts\Hooks;
 
-use Extcode\Contacts\Domain\Repository\CountryRepository;
-use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
-use TYPO3\CMS\Core\Information\Typo3Version;
 /*
  * This file is part of the package extcode/contacts.
  *
@@ -12,6 +9,9 @@ use TYPO3\CMS\Core\Information\Typo3Version;
  * LICENSE file that was distributed with this source code.
  */
 
+use Extcode\Contacts\Domain\Model\Dto\ExtensionConfiguration;
+use Extcode\Contacts\Domain\Repository\CountryRepository;
+use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface;
@@ -59,14 +59,7 @@ class GoogleMapHook
     {
         $this->init($params);
 
-        $googleMapsLibrary = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('contacts', 'googleMapsLibrary');
-        $googleMapsApiKey = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('contacts', 'googleMapsApiKey');
-
-        if ($googleMapsApiKey) {
-            $googleMapsLibrary .=  '&key=' . $googleMapsApiKey . '&callback=initTxContacts';
-        }
-
-        $out = $this->getJavaScript($googleMapsLibrary);
+        $out = $this->getJavaScript($this->getMapApiUrl());
         $out .= $this->getInputFields($params);
 
         return $out;
@@ -151,6 +144,21 @@ class GoogleMapHook
         $out .= '</div>';
 
         return $out;
+    }
+
+    protected function getMapApiUrl(): string
+    {
+        $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+        if (!$extensionConfiguration->isMapsUsageEnabled()) {
+            throw new \Exception(
+                'No map API URL or map API key has been entered. Please check the extension configuration.',
+                1775634797
+            );
+        }
+
+        return $extensionConfiguration->getMapsApiUrl()
+            . '&key=' . $extensionConfiguration->getMapsApiKey()
+            . '&callback=initTxContacts';
     }
 
     protected function setLatLon(array $params): void
