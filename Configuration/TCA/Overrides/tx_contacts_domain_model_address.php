@@ -26,7 +26,7 @@ if ($extensionConfiguration->isMapsUsageEnabled()) {
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'tx_contacts_domain_model_address',
-        '--linebreak, coords',
+        '--linebreak--, coords',
         '',
         'after:lon'
     );
