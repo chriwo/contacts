@@ -21,21 +21,17 @@ final class ExtcodeContactsCTypeMigration extends AbstractListTypeToCTypeUpdate
     }
 
     /**
-     * This must return an array containing the "list_type" to "CType" mapping
-     *
-     *  Example:
-     *
-     *  [
-     *      'pi_plugin1' => 'pi_plugin1',
-     *      'pi_plugin2' => 'new_content_element',
-     *  ]
-     *
      * @return array<string, string>
      */
     protected function getListTypeToCTypeMapping(): array
     {
         return [
-            // TODO: Add this mapping yourself!
+            'contacts_address' => 'contacts_address',
+            'contacts_addressSearch' => 'contacts_addresssearch',
+            'contacts_companies' => 'contacts_companies',
+            'contacts_companyTeaser' => 'contacts_companyteaser',
+            'contacts_contactTeaser' => 'contacts_contactteaser',
+            'contacts_contacts' => 'contacts_contacts',
         ];
     }
 }
