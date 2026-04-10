@@ -3,7 +3,6 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <sheetTitle>Optionen</sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.companyUids>
@@ -22,10 +21,11 @@
                         <label>LLL:EXT:contacts/Resources/Private/Language/locallang_be.xlf:flexforms_template.templateLayout</label>
                         <config>
                             <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <disableNoMatchingValueElement>1</disableNoMatchingValueElement>
                             <itemsProcFunc>Extcode\Contacts\UserFunctions\ItemsProcFunc->user_templateLayout</itemsProcFunc>
                             <extKey>contacts</extKey>
                             <pluginName>CompanyTeaser</pluginName>
-                            <renderType>selectSingle</renderType>
                         </config>
                     </settings.templateLayout>
                 </el>

@@ -1579,6 +1579,12 @@ parameters:
 			path: Classes/ViewHelpers/MetaTagViewHelper.php
 
 		-
+			message: '#^Cannot access offset ''CType'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
 			message: '#^Cannot access offset ''columns'' on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 1
@@ -1587,7 +1593,19 @@ parameters:
 		-
 			message: '#^Cannot access offset ''config'' on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
-			count: 3
+			count: 4
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''contacts'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: '#^Cannot access offset ''itemGroups'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
 			path: Configuration/TCA/Overrides/tt_content.php
 
 		-
@@ -1795,12 +1813,6 @@ parameters:
 			path: Configuration/TCA/tx_contacts_domain_model_phone.php
 
 		-
-			message: '#^Binary operation "\." between ''plugin\.tx_contacts…'' and mixed results in an error\.$#'
-			identifier: binaryOp.invalid
-			count: 2
-			path: ext_localconf.php
-
-		-
 			message: '#^Cannot access an offset on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 4
@@ -1874,18 +1886,6 @@ parameters:
 
 		-
 			message: '#^Cannot access offset ''formevals'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: ext_localconf.php
-
-		-
-			message: '#^Cannot access offset ''googleMapsApiKey'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: ext_localconf.php
-
-		-
-			message: '#^Cannot access offset ''googleMapsLibrary'' on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 1
 			path: ext_localconf.php
