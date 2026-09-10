@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Extcode\Contacts\Controller\Backend\ContactController;
 
 return [
