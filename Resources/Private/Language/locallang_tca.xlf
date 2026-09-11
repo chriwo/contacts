@@ -22,6 +22,9 @@
                 <source>Description</source>
             </trans-unit>
 
+			<trans-unit id="tt_content.div.contacts_configuration">
+				<source>Configuration</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>
