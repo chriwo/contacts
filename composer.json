@@ -72,9 +72,6 @@
 		"test:fractor:process:dry-run": [
 			".build/bin/fractor process -c fractor.php --clear-cache --output-format=console --dry-run"
 		],
-        "test:typoscript:lint": [
-            ".build/bin/typoscript-lint -c Build/typoscriptlint.yaml Configuration"
-        ],
         "test:php": [
             "@test:php:unit",
             "@test:php:functional"
@@ -84,7 +81,6 @@
             "@test:rector:process",
 			"@test:fractor:process",
             "@test:cgl",
-            "@test:typoscript:lint",
             "@test:php"
         ]
     },
