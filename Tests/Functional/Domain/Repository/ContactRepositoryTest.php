@@ -37,6 +37,7 @@ class ContactRepositoryTest extends FunctionalTestCase
     public function tearDown(): void
     {
         unset($this->contactRepository);
+        parent::tearDown();
     }
 
     #[Test]

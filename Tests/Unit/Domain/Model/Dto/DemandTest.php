@@ -13,148 +13,155 @@ use Extcode\Contacts\Domain\Model\Dto\Demand;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class DemandTest extends UnitTestCase
+final class DemandTest extends UnitTestCase
 {
-    /**
-     * @var Demand
-     */
-    protected $fixture;
-
-    #[\Override]
-    public function setUp(): void
-    {
-        $this->fixture = new Demand();
-    }
-
-    #[\Override]
-    public function tearDown(): void
-    {
-        unset($this->fixture);
-    }
-
     #[Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Demand();
+
         self::assertEmpty(
-            $this->fixture->getSearchString()
+            $fixture->getSearchString()
         );
     }
 
     #[Test]
     public function setSearchStringSetsSearchString(): void
     {
+        $fixture = new Demand();
+
         $searchString = 'Search String';
 
-        $this->fixture->setSearchString($searchString);
+        $fixture->setSearchString($searchString);
 
         self::assertSame(
             $searchString,
-            $this->fixture->getSearchString()
+            $fixture->getSearchString()
         );
     }
 
     #[Test]
     public function getAvailableCategoriesInitiallyReturnsEmptyArray(): void
     {
+        $fixture = new Demand();
+
         self::assertEmpty(
-            $this->fixture->getAvailableCategories()
+            $fixture->getAvailableCategories()
         );
     }
 
     #[Test]
     public function setAvailableCategoriesSetsAvailableCategories(): void
     {
+        $fixture = new Demand();
+
         $availableCategories = [2, 4];
 
-        $this->fixture->setAvailableCategories($availableCategories);
+        $fixture->setAvailableCategories($availableCategories);
 
         self::assertSame(
             $availableCategories,
-            $this->fixture->getAvailableCategories()
+            $fixture->getAvailableCategories()
         );
     }
 
     #[Test]
     public function getSelectedCategoryInitiallyReturnsZero(): void
     {
+        $fixture = new Demand();
+
         self::assertSame(
             0,
-            $this->fixture->getSelectedCategory()
+            $fixture->getSelectedCategory()
         );
     }
 
     #[Test]
     public function setSelectedCategorySetsSelectedCategory(): void
     {
+        $fixture = new Demand();
+
         $selectedCategory = 2;
 
-        $this->fixture->setSelectedCategory($selectedCategory);
+        $fixture->setSelectedCategory($selectedCategory);
 
         self::assertSame(
             $selectedCategory,
-            $this->fixture->getSelectedCategory()
+            $fixture->getSelectedCategory()
         );
     }
     #[Test]
     public function getActionInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Demand();
+
         self::assertEmpty(
-            $this->fixture->getAction()
+            $fixture->getAction()
         );
     }
 
     #[Test]
     public function setActionSetsAction(): void
     {
+        $fixture = new Demand();
+
         $action = 'Action Name';
 
-        $this->fixture->setAction($action);
+        $fixture->setAction($action);
 
         self::assertSame(
             $action,
-            $this->fixture->getAction()
+            $fixture->getAction()
         );
     }
 
     #[Test]
     public function getClassInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Demand();
+
         self::assertEmpty(
-            $this->fixture->getClass()
+            $fixture->getClass()
         );
     }
 
     #[Test]
     public function setClassSetsClass(): void
     {
+        $fixture = new Demand();
+
         $class = 'Class Name';
 
-        $this->fixture->setClass($class);
+        $fixture->setClass($class);
 
         self::assertSame(
             $class,
-            $this->fixture->getClass()
+            $fixture->getClass()
         );
     }
 
     #[Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Demand();
+
         self::assertEmpty(
-            $this->fixture->getOrderBy()
+            $fixture->getOrderBy()
         );
     }
 
     #[Test]
     public function setOrderBySetsOrderBy(): void
     {
+        $fixture = new Demand();
+
         $orderBy = 'distance';
 
-        $this->fixture->setOrderBy($orderBy);
+        $fixture->setOrderBy($orderBy);
 
         self::assertSame(
             $orderBy,
-            $this->fixture->getOrderBy()
+            $fixture->getOrderBy()
         );
     }
 }

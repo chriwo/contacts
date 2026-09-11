@@ -13,172 +13,183 @@ use Extcode\Contacts\Domain\Model\Dto\AddressSearch;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class AddressSearchTest extends UnitTestCase
+final class AddressSearchTest extends UnitTestCase
 {
-    /**
-     * @var AddressSearch
-     */
-    protected $fixture;
-
-    #[\Override]
-    public function setUp(): void
-    {
-        $this->fixture = new AddressSearch();
-    }
-
-    #[\Override]
-    public function tearDown(): void
-    {
-        unset($this->fixture);
-    }
-
     #[Test]
     public function getLatInitiallyReturnsZeroFloat(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertSame(
             0.0,
-            $this->fixture->getLat()
+            $fixture->getLat()
         );
     }
 
     #[Test]
     public function setLatSetsLat(): void
     {
+        $fixture = new AddressSearch();
+
         $lat = 54.6717825;
 
-        $this->fixture->setLat($lat);
+        $fixture->setLat($lat);
 
         self::assertSame(
             $lat,
-            $this->fixture->getLat()
+            $fixture->getLat()
         );
     }
 
     #[Test]
     public function getLonInitiallyReturnsZeroFloat(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertSame(
             0.0,
-            $this->fixture->getLon()
+            $fixture->getLon()
         );
     }
 
     #[Test]
     public function setLonSetsLon(): void
     {
+        $fixture = new AddressSearch();
+
         $lon = 13.4308058;
 
-        $this->fixture->setLon($lon);
+        $fixture->setLon($lon);
 
         self::assertSame(
             $lon,
-            $this->fixture->getLon()
+            $fixture->getLon()
         );
     }
 
     #[Test]
     public function getRadiusInitiallyReturnsZeroInt(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertSame(
             0,
-            $this->fixture->getRadius()
+            $fixture->getRadius()
         );
     }
 
     #[Test]
     public function setRadiusSetsRadius(): void
     {
+        $fixture = new AddressSearch();
+
         $radius = 10;
 
-        $this->fixture->setRadius($radius);
+        $fixture->setRadius($radius);
 
         self::assertSame(
             $radius,
-            $this->fixture->getRadius()
+            $fixture->getRadius()
         );
     }
 
     #[Test]
     public function getPidsInitiallyReturnsEmptyString(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertEmpty(
-            $this->fixture->getPids()
+            $fixture->getPids()
         );
     }
 
     #[Test]
     public function setPidsSetsPids(): void
     {
+        $fixture = new AddressSearch();
+
         $pids = '10, 30';
 
-        $this->fixture->setPids($pids);
+        $fixture->setPids($pids);
 
         self::assertSame(
             $pids,
-            $this->fixture->getPids()
+            $fixture->getPids()
         );
     }
 
     #[Test]
     public function getSearchStringInitiallyReturnsEmptyString(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertEmpty(
-            $this->fixture->getSearchString()
+            $fixture->getSearchString()
         );
     }
 
     #[Test]
     public function setSearchStringSetsSearchString(): void
     {
+        $fixture = new AddressSearch();
+
         $searchString = 'Search String';
 
-        $this->fixture->setSearchString($searchString);
+        $fixture->setSearchString($searchString);
 
         self::assertSame(
             $searchString,
-            $this->fixture->getSearchString()
+            $fixture->getSearchString()
         );
     }
 
     #[Test]
     public function getOrderByInitiallyReturnsEmptyString(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertEmpty(
-            $this->fixture->getOrderBy()
+            $fixture->getOrderBy()
         );
     }
 
     #[Test]
     public function setOrderBySetsOrderBy(): void
     {
+        $fixture = new AddressSearch();
+
         $orderBy = 'distance';
 
-        $this->fixture->setOrderBy($orderBy);
+        $fixture->setOrderBy($orderBy);
 
         self::assertSame(
             $orderBy,
-            $this->fixture->getOrderBy()
+            $fixture->getOrderBy()
         );
     }
 
     #[Test]
     public function getFallbackOrderByInitiallyReturnsEmptyString(): void
     {
+        $fixture = new AddressSearch();
+
         self::assertEmpty(
-            $this->fixture->getFallbackOrderBy()
+            $fixture->getFallbackOrderBy()
         );
     }
 
     #[Test]
     public function setFallbackOrderBySetsFallbackOrderBy(): void
     {
+        $fixture = new AddressSearch();
+
         $fallbackOrderBy = 'title';
 
-        $this->fixture->setFallbackOrderBy($fallbackOrderBy);
+        $fixture->setFallbackOrderBy($fallbackOrderBy);
 
         self::assertSame(
             $fallbackOrderBy,
-            $this->fixture->getFallbackOrderBy()
+            $fixture->getFallbackOrderBy()
         );
     }
 }

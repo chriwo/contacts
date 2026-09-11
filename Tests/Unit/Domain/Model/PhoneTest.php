@@ -13,72 +13,65 @@ use Extcode\Contacts\Domain\Model\Phone;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class PhoneTest extends UnitTestCase
+final class PhoneTest extends UnitTestCase
 {
-    /**
-     * @var Phone
-     */
-    protected $fixture;
-
-    #[\Override]
-    public function setUp(): void
-    {
-        $this->fixture = new Phone();
-    }
-
-    #[\Override]
-    public function tearDown(): void
-    {
-        unset($this->fixture);
-    }
-
     #[Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
+        $fixture = new Phone();
+
         self::assertSame(
             'VOICE',
-            $this->fixture->getType()
+            $fixture->getType()
         );
     }
 
     #[Test]
     public function setValidTypeSetsType(): void
     {
-        $this->fixture->setType('CELL');
+        $fixture = new Phone();
+
+        $fixture->setType('CELL');
 
         self::assertSame(
             'CELL',
-            $this->fixture->getType()
+            $fixture->getType()
         );
     }
 
     #[Test]
     public function setInvalidTypeThrowsException(): void
     {
+        $fixture = new Phone();
+
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('The type have to be a set of (PREF, WORK, HOME, VOICE, FAX, MSG, CELL, PAGER, BBS, MODEM, CAR, ISDN, VIDEO).');
         $this->expectExceptionCode(1373531068);
 
-        $this->fixture->setType('inValidType');
+        $fixture->setType('inValidType');
     }
 
     #[Test]
     public function getNumberInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Phone();
+
         self::assertSame(
             '',
-            $this->fixture->getNumber()
+            $fixture->getNumber()
         );
     }
 
     #[Test]
     public function setNumberSetsNumber(): void
     {
-        $this->fixture->setNumber('foo bar');
+        $fixture = new Phone();
+
+        $fixture->setNumber('foo bar');
 
         self::assertSame(
             'foo bar',
-            $this->fixture->getNumber()
+            $fixture->getNumber()
         );
     }
 }

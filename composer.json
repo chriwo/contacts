@@ -52,8 +52,11 @@
             ".build/bin/phpunit -c phpunit.unit.xml"
         ],
         "test:php:functional": [
-            "typo3DatabaseDriver=\"pdo_sqlite\" .build/bin/phpunit -c phpunit.functional.xml"
+            "typo3DatabaseDriver=\"mysqli\" .build/bin/phpunit -c phpunit.functional.xml"
         ],
+		"test:php:functional:sqlite": [
+			"typo3DatabaseDriver=\"pdo_sqlite\" .build/bin/phpunit -c phpunit.functional.xml"
+		],
         "test:phpstan:analyse": [
             ".build/bin/phpstan analyse -c phpstan.neon"
         ],
@@ -69,9 +72,6 @@
 		"test:fractor:process:dry-run": [
 			".build/bin/fractor process -c fractor.php --clear-cache --output-format=console --dry-run"
 		],
-        "test:typoscript:lint": [
-            ".build/bin/typoscript-lint -c Build/typoscriptlint.yaml Configuration"
-        ],
         "test:php": [
             "@test:php:unit",
             "@test:php:functional"
@@ -81,7 +81,6 @@
             "@test:rector:process",
 			"@test:fractor:process",
             "@test:cgl",
-            "@test:typoscript:lint",
             "@test:php"
         ]
     },

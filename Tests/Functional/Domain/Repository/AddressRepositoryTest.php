@@ -39,6 +39,7 @@ class AddressRepositoryTest extends FunctionalTestCase
     public function tearDown(): void
     {
         unset($this->addressRepository);
+        parent::tearDown();
     }
 
     #[Test]

@@ -27,7 +27,7 @@ return RectorConfig::configure()
     ->withImportNames(false, true, false, true)
     ->withSets([
         SetList::CODE_QUALITY,
-        LevelSetList::UP_TO_PHP_84,
+        LevelSetList::UP_TO_PHP_85,
 
         Typo3SetList::CODE_QUALITY,
         Typo3SetList::GENERAL,
