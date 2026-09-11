@@ -1855,12 +1855,6 @@ parameters:
 			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
 
 		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Functional/Domain/Repository/AddressRepositoryTest.php
-
-		-
 			message: '#^You should use assertCount\(\$expectedCount, \$variable\) instead of assertSame\(\$expectedCount, \$variable\-\>count\(\)\)\.$#'
 			identifier: phpunit.assertCount
 			count: 2
@@ -1903,12 +1897,6 @@ parameters:
 			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
 
 		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Functional/Domain/Repository/CompanyRepositoryTest.php
-
-		-
 			message: '#^Call to an undefined method object\:\:getLastName\(\)\.$#'
 			identifier: method.notFound
 			count: 5
@@ -1937,138 +1925,6 @@ parameters:
 			identifier: unset.possiblyHookedProperty
 			count: 1
 			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Functional/Domain/Repository/ContactRepositoryTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\AddressTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/AddressTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/AddressTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/AddressTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\CompanyTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/CompanyTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/CompanyTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/CompanyTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\ContactTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/ContactTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/ContactTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/ContactTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\CountryTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/CountryTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/CountryTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/CountryTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\Dto\\AddressSearchTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/AddressSearchTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\Dto\\DemandTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/Dto/DemandTest.php
-
-		-
-			message: '#^Cannot unset property Extcode\\Contacts\\Tests\\Unit\\Domain\\Model\\PhoneTest\:\:\$fixture because it might have hooks in a subclass\.$#'
-			identifier: unset.possiblyHookedProperty
-			count: 1
-			path: Tests/Unit/Domain/Model/PhoneTest.php
-
-		-
-			message: '#^Missing call to parent\:\:setUp\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/PhoneTest.php
-
-		-
-			message: '#^Missing call to parent\:\:tearDown\(\) method\.$#'
-			identifier: phpunit.callParent
-			count: 1
-			path: Tests/Unit/Domain/Model/PhoneTest.php
 
 		-
 			message: '#^Binary operation "\." between ''plugin\.tx_contacts…'' and mixed results in an error\.$#'

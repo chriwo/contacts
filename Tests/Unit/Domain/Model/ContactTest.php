@@ -14,233 +14,248 @@ use InvalidArgumentException;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class ContactTest extends UnitTestCase
+final class ContactTest extends UnitTestCase
 {
-    protected string $salutation = '';
+    private const string SALUTATION = 'Salutation';
 
-    protected string $title = '';
+    private const string TITLE = 'Title';
 
-    protected string $firstName = '';
+    private const string FIRST_NAME = 'FirstName';
 
-    protected string $lastName = '';
+    private const string LAST_NAME = 'LastName';
 
-    /**
-     * @var Contact
-     */
-    protected $fixture;
-
-    #[\Override]
-    public function setUp(): void
+    private function createFixture(): Contact
     {
-        $this->salutation = 'Salutation';
-        $this->title = 'Title';
-        $this->firstName = 'FirstName';
-        $this->lastName = 'LastName';
-        $this->fixture = new Contact(
-            $this->salutation,
-            $this->title,
-            $this->firstName,
-            $this->lastName
+        return new Contact(
+            self::SALUTATION,
+            self::TITLE,
+            self::FIRST_NAME,
+            self::LAST_NAME
         );
-    }
-
-    #[\Override]
-    public function tearDown(): void
-    {
-        unset($this->fixture);
     }
 
     #[Test]
     public function getSalutationInitiallyReturnsSalutation(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
-            $this->salutation,
-            $this->fixture->getSalutation()
+            self::SALUTATION,
+            $fixture->getSalutation()
         );
     }
 
     #[Test]
     public function setSalutationSetsSalutation(): void
     {
-        $this->fixture->setSalutation('Salutation new');
+        $fixture = $this->createFixture();
+        $fixture->setSalutation('Salutation new');
 
         self::assertSame(
             'Salutation new',
-            $this->fixture->getSalutation()
+            $fixture->getSalutation()
         );
     }
 
     #[Test]
     public function getTitleInitiallyReturnsTitle(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
-            $this->title,
-            $this->fixture->getTitle()
+            self::TITLE,
+            $fixture->getTitle()
         );
     }
 
     #[Test]
     public function setTitleSetsTitle(): void
     {
-        $this->fixture->setTitle('Title new');
+        $fixture = $this->createFixture();
+        $fixture->setTitle('Title new');
 
         self::assertSame(
             'Title new',
-            $this->fixture->getTitle()
+            $fixture->getTitle()
         );
     }
 
     #[Test]
     public function getFirstNameInitiallyReturnsFirstName(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
-            $this->firstName,
-            $this->fixture->getFirstName()
+            self::FIRST_NAME,
+            $fixture->getFirstName()
         );
     }
 
     #[Test]
     public function setFirstNameSetsFirstName(): void
     {
-        $this->fixture->setFirstName('Firstname new');
+        $fixture = $this->createFixture();
+        $fixture->setFirstName('Firstname new');
 
         self::assertSame(
             'Firstname new',
-            $this->fixture->getFirstName()
+            $fixture->getFirstName()
         );
     }
 
     #[Test]
     public function setFirstNameWithEmptyStringThrowsException(): void
     {
+        $fixture = $this->createFixture();
+
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('The first name can not be blank.');
         $this->expectExceptionCode(1373525114);
 
-        $this->fixture->setFirstName('');
+        $fixture->setFirstName('');
     }
 
     #[Test]
     public function getLastNameInitiallyReturnsLastName(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
-            $this->lastName,
-            $this->fixture->getLastName()
+            self::LAST_NAME,
+            $fixture->getLastName()
         );
     }
 
     #[Test]
     public function setLastNameSetsLastName(): void
     {
-        $this->fixture->setLastName('Lastname new');
+        $fixture = $this->createFixture();
+        $fixture->setLastName('Lastname new');
 
         self::assertSame(
             'Lastname new',
-            $this->fixture->getLastName()
+            $fixture->getLastName()
         );
     }
 
     #[Test]
     public function setLastNameWithEmptyStringThrowsException(): void
     {
+        $fixture = $this->createFixture();
+
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('The last name can not be blank.');
         $this->expectExceptionCode(1373525586);
 
-        $this->fixture->setLastName('');
+        $fixture->setLastName('');
     }
 
     #[Test]
     public function getBirthdayInitiallyReturnsZero(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertNull(
-            $this->fixture->getBirthday()
+            $fixture->getBirthday()
         );
     }
 
     #[Test]
     public function setBirthdaySetsBirthday(): void
     {
+        $fixture = $this->createFixture();
+
         $birthdate = new \DateTime('2019-05-05');
 
-        $this->fixture->setBirthday($birthdate);
+        $fixture->setBirthday($birthdate);
 
         self::assertSame(
             $birthdate,
-            $this->fixture->getBirthday()
+            $fixture->getBirthday()
         );
     }
 
     #[Test]
     public function setBirthdayBefore1970(): void
     {
+        $fixture = $this->createFixture();
+
         $birthdate = new \DateTime('1956-05-05');
 
-        $this->fixture->setBirthday($birthdate);
+        $fixture->setBirthday($birthdate);
 
         self::assertSame(
             $birthdate,
-            $this->fixture->getBirthday()
+            $fixture->getBirthday()
         );
     }
 
     #[Test]
     public function getTeaserInitiallyReturnsEmptyString(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
             '',
-            $this->fixture->getTeaser()
+            $fixture->getTeaser()
         );
     }
 
     #[Test]
     public function setTeaserSetsTeaser(): void
     {
-        $this->fixture->setTeaser('Teaser');
+        $fixture = $this->createFixture();
+        $fixture->setTeaser('Teaser');
 
         self::assertSame(
             'Teaser',
-            $this->fixture->getTeaser()
+            $fixture->getTeaser()
         );
     }
 
     #[Test]
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
             '',
-            $this->fixture->getDescription()
+            $fixture->getDescription()
         );
     }
 
     #[Test]
     public function setDescriptionSetsDescription(): void
     {
-        $this->fixture->setDescription('Description');
+        $fixture = $this->createFixture();
+        $fixture->setDescription('Description');
 
         self::assertSame(
             'Description',
-            $this->fixture->getDescription()
+            $fixture->getDescription()
         );
     }
 
     #[Test]
     public function getMetaDescriptionInitiallyReturnsEmptyString(): void
     {
+        $fixture = $this->createFixture();
+
         self::assertSame(
             '',
-            $this->fixture->getMetaDescription()
+            $fixture->getMetaDescription()
         );
     }
 
     #[Test]
     public function setMetaDescriptionSetsMetaDescription(): void
     {
-        $this->fixture->setMetaDescription('MetaDescription');
+        $fixture = $this->createFixture();
+        $fixture->setMetaDescription('MetaDescription');
 
         self::assertSame(
             'MetaDescription',
-            $this->fixture->getMetaDescription()
+            $fixture->getMetaDescription()
         );
     }
 }

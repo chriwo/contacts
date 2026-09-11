@@ -37,6 +37,7 @@ class CompanyRepositoryTest extends FunctionalTestCase
     public function tearDown(): void
     {
         unset($this->companyRepository);
+        parent::tearDown();
     }
 
     #[Test]

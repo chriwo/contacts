@@ -52,8 +52,11 @@
             ".build/bin/phpunit -c phpunit.unit.xml"
         ],
         "test:php:functional": [
-            "typo3DatabaseDriver=\"pdo_sqlite\" .build/bin/phpunit -c phpunit.functional.xml"
+            "typo3DatabaseDriver=\"mysqli\" .build/bin/phpunit -c phpunit.functional.xml"
         ],
+		"test:php:functional:sqlite": [
+			"typo3DatabaseDriver=\"pdo_sqlite\" .build/bin/phpunit -c phpunit.functional.xml"
+		],
         "test:phpstan:analyse": [
             ".build/bin/phpstan analyse -c phpstan.neon"
         ],

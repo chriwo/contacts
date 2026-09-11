@@ -15,274 +15,296 @@ use InvalidArgumentException;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class AddressTest extends UnitTestCase
+final class AddressTest extends UnitTestCase
 {
-    /**
-     * @var Address
-     */
-    protected $fixture;
-
-    #[\Override]
-    public function setUp(): void
-    {
-        $this->fixture = new Address();
-    }
-
-    #[\Override]
-    public function tearDown(): void
-    {
-        unset($this->fixture);
-    }
-
     #[Test]
     public function getTypeInitiallyReturnsDefaultTypes(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             'INTL,POSTAL,PARCEL,WORK',
-            $this->fixture->getType()
+            $fixture->getType()
         );
     }
 
     #[Test]
     public function setValidTypeSetsType(): void
     {
-        $this->fixture->setType('DOM');
+        $fixture = new Address();
+        $fixture->setType('DOM');
 
         self::assertSame(
             'DOM',
-            $this->fixture->getType()
+            $fixture->getType()
         );
     }
 
     #[Test]
     public function setInvalidTypeThrowsException(): void
     {
+        $fixture = new Address();
+
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('The type have to be a set of (DOM, INTL, POSTAL, PARCEL, HOME, WORK).');
         $this->expectExceptionCode(1373530255);
 
-        $this->fixture->setType('inValidType');
+        $fixture->setType('inValidType');
     }
 
     #[Test]
     public function getStreetInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getStreet()
+            $fixture->getStreet()
         );
     }
 
     #[Test]
     public function setStreetSetsStreet(): void
     {
-        $this->fixture->setStreet('Street');
+        $fixture = new Address();
+        $fixture->setStreet('Street');
 
         self::assertSame(
             'Street',
-            $this->fixture->getStreet()
+            $fixture->getStreet()
         );
     }
 
     #[Test]
     public function getStreetNumberInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getStreetNumber()
+            $fixture->getStreetNumber()
         );
     }
 
     #[Test]
     public function setStreetNumberSetsStreetNumber(): void
     {
-        $this->fixture->setStreetNumber('Street Number');
+        $fixture = new Address();
+        $fixture->setStreetNumber('Street Number');
 
         self::assertSame(
             'Street Number',
-            $this->fixture->getStreetNumber()
+            $fixture->getStreetNumber()
         );
     }
 
     #[Test]
     public function getAddition1InitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getAddition1()
+            $fixture->getAddition1()
         );
     }
 
     #[Test]
     public function setAddition1SetsAddition1(): void
     {
-        $this->fixture->setAddition1('Addition1');
+        $fixture = new Address();
+        $fixture->setAddition1('Addition1');
 
         self::assertSame(
             'Addition1',
-            $this->fixture->getAddition1()
+            $fixture->getAddition1()
         );
     }
 
     #[Test]
     public function getAddition2InitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getAddition2()
+            $fixture->getAddition2()
         );
     }
 
     #[Test]
     public function setAddition1SetsAddition2(): void
     {
-        $this->fixture->setAddition2('Addition2');
+        $fixture = new Address();
+        $fixture->setAddition2('Addition2');
 
         self::assertSame(
             'Addition2',
-            $this->fixture->getAddition2()
+            $fixture->getAddition2()
         );
     }
 
     #[Test]
     public function getZipInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getZip()
+            $fixture->getZip()
         );
     }
 
     #[Test]
     public function setZipSetsZip(): void
     {
-        $this->fixture->setZip('ZIP');
+        $fixture = new Address();
+        $fixture->setZip('ZIP');
 
         self::assertSame(
             'ZIP',
-            $this->fixture->getZip()
+            $fixture->getZip()
         );
     }
 
     #[Test]
     public function getCityInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getCity()
+            $fixture->getCity()
         );
     }
 
     #[Test]
     public function setCitySetsCity(): void
     {
-        $this->fixture->setCity('City');
+        $fixture = new Address();
+        $fixture->setCity('City');
 
         self::assertSame(
             'City',
-            $this->fixture->getCity()
+            $fixture->getCity()
         );
     }
 
     #[Test]
     public function getRegionInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getRegion()
+            $fixture->getRegion()
         );
     }
 
     #[Test]
     public function setRegionSetsRegion(): void
     {
-        $this->fixture->setRegion('Region');
+        $fixture = new Address();
+        $fixture->setRegion('Region');
 
         self::assertSame(
             'Region',
-            $this->fixture->getRegion()
+            $fixture->getRegion()
         );
     }
 
     #[Test]
     public function getCountryInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertNull(
-            $this->fixture->getCountry()
+            $fixture->getCountry()
         );
     }
 
     #[Test]
     public function setCountrySetsCountry(): void
     {
+        $fixture = new Address();
+
         $country = new Country();
         $country->setIso2('de');
 
-        $this->fixture->setCountry($country);
+        $fixture->setCountry($country);
 
         self::assertSame(
             $country,
-            $this->fixture->getCountry()
+            $fixture->getCountry()
         );
     }
 
     #[Test]
     public function getPostBoxInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getPostBox()
+            $fixture->getPostBox()
         );
     }
 
     #[Test]
     public function setPostBoxSetsPostBox(): void
     {
-        $this->fixture->setPostBox('Post Box');
+        $fixture = new Address();
+        $fixture->setPostBox('Post Box');
 
         self::assertSame(
             'Post Box',
-            $this->fixture->getPostBox()
+            $fixture->getPostBox()
         );
     }
 
     #[Test]
     public function getLatInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getLat()
+            $fixture->getLat()
         );
     }
 
     #[Test]
     public function setLatSetsLat(): void
     {
-        $this->fixture->setLat('52° 31′ N');
+        $fixture = new Address();
+        $fixture->setLat('52° 31′ N');
 
         self::assertSame(
             '52° 31′ N',
-            $this->fixture->getLat()
+            $fixture->getLat()
         );
     }
 
     #[Test]
     public function getLonInitiallyReturnsEmptyString(): void
     {
+        $fixture = new Address();
+
         self::assertSame(
             '',
-            $this->fixture->getLon()
+            $fixture->getLon()
         );
     }
 
     #[Test]
     public function setLonSetsLon(): void
     {
-        $this->fixture->setLon('13° 24′ O');
+        $fixture = new Address();
+        $fixture->setLon('13° 24′ O');
 
         self::assertSame(
             '13° 24′ O',
-            $this->fixture->getLon()
+            $fixture->getLon()
         );
     }
 }
