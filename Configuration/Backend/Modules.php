@@ -9,7 +9,7 @@ return [
         'parent' => 'web',
         'position' => ['bottom'],
         'access' => 'user',
-        'workspaces' => 'live',
+        'workspaces' => '*',
         'path' => '/module/web/contacts',
         'labels' => 'LLL:EXT:contacts/Resources/Private/Language/locallang_db.xlf:tx_contacts.module.contacts',
         'iconIdentifier' => 'module-contacts',
