@@ -91,61 +91,7 @@ parameters:
 			path: Classes/Command/GeocodeCommand.php
 
 		-
-			message: '#^Cannot access offset ''category'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Cannot access offset ''searchString'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Cannot cast mixed to int\.$#'
-			identifier: cast.int
-			count: 2
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Method Extcode\\Contacts\\Controller\\ActionController\:\:createDemandObjectFromSettings\(\) has parameter \$settings with no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Method Extcode\\Contacts\\Controller\\ActionController\:\:getSelectedCategories\(\) return type has no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Parameter \#1 \$orderBy of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setOrderBy\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Parameter \#1 \$parentCategory of method Extcode\\Contacts\\Domain\\Repository\\CategoryRepository\:\:findSubcategoriesRecursiveAsArray\(\) expects TYPO3\\CMS\\Extbase\\Domain\\Model\\Category, TYPO3\\CMS\\Extbase\\DomainObject\\DomainObjectInterface\|null given\.$#'
-			identifier: argument.type
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Parameter \#1 \$searchString of method Extcode\\Contacts\\Domain\\Model\\Dto\\Demand\:\:setSearchString\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
 			message: '#^Parameter \#2 \$originalRow of method TYPO3\\CMS\\Core\\Domain\\Repository\\PageRepository\:\:getLanguageOverlay\(\) expects array, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: Classes/Controller/ActionController.php
-
-		-
-			message: '#^Parameter \#2 \$string of static method TYPO3\\CMS\\Core\\Utility\\GeneralUtility\:\:intExplode\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
 			path: Classes/Controller/ActionController.php
