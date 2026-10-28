@@ -32,9 +32,9 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     protected function createDemandObjectFromSettings(array $settings): Demand
     {
         $demand = new Demand();
-        $this->addCategoriesToDemandObjectFromSettings($demand);
-        if ($this->settings['orderBy']) {
-            $demand->setOrderBy($this->settings['orderBy']);
+        $this->addCategoriesToDemandObjectFromSettings($demand, $settings);
+        if ($settings['orderBy']) {
+            $demand->setOrderBy($settings['orderBy']);
         }
 
         $arguments = $this->request->getArguments();
@@ -57,21 +57,18 @@ class ActionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         return $demand;
     }
 
-    /**
-     * @param Demand $demand
-     */
-    protected function addCategoriesToDemandObjectFromSettings(&$demand): void
+    protected function addCategoriesToDemandObjectFromSettings(Demand $demand, array $settings): void
     {
-        if ($this->settings['categoriesList']) {
+        if ($settings['categoriesList']) {
             $selectedCategories = GeneralUtility::intExplode(
                 ',',
-                $this->settings['categoriesList'],
+                $settings['categoriesList'],
                 true
             );
 
             $categories = [];
 
-            if ($this->settings['listSubcategories']) {
+            if ($settings['listSubcategories']) {
                 foreach ($selectedCategories as $selectedCategory) {
                     $category = $this->categoryRepository->findByUid($selectedCategory);
                     $categories = array_merge(
